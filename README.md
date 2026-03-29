@@ -14,13 +14,15 @@ The main objectives of this repository are:
 
 # 🧰 Tools Used
 
-This repository includes projects utilizing the following tools and technologies:
-- **Verilog** and **SystemVerilog** for RTL design and verification.
-- **UVM (Universal Verification Methodology)** for structured and reusable verification.
-- **AXI, APB, AHB** digital protocols for communication-based systems.
-- **Perl** for EDA automation and scripting tasks.
-- **ModelSim/Questa** for simulation and verification.
-- **Icarus Verilog** and **GTKWave** for RTL simulation and waveform viewing.
+This repository showcases the use of the following tools and technologies in **ASIC Design & Verification**:
+
+- **Quartus Prime Lite**: For design, synthesis, and simulation.
+- **EDA Playground**: An online platform for Verilog/SystemVerilog simulation and verification.
+- **Questasim**: Used for advanced simulation and verification of designs.
+- **Perl**: Command-line scripting for EDA automation, log parsing, and testbench generation.
+- **GVIM**: A text editor used for Verilog/SystemVerilog code editing and development.
+
+These tools were instrumental in the design, simulation, and verification of various digital systems and protocols.
 
 # 👨‍💻 Author
 
