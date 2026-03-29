@@ -12,7 +12,7 @@ The main objectives of this repository are:
 - To implement and verify **digital protocols** (AXI, APB, AHB) in various ASIC design scenarios.
 - To provide a portfolio of **academic assignments** and **personal projects** on digital design, verification, and scripting.
 
-## Tools Used
+# 🧰 Tools Used
 
 This repository includes projects utilizing the following tools and technologies:
 - **Verilog** and **SystemVerilog** for RTL design and verification.
