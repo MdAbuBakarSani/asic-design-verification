@@ -26,9 +26,9 @@ These tools were instrumental in the design, simulation, and verification of var
 
 # 👨‍💻 Author
 
-**Name**:Md Abu Bakar Sani 
+**Name**: Md Abu Bakar Sani 
 
-**Bachelor of Science** in Electrical and Electronics Engineering
+**Bachelor of Science** in Electrical and Electronics Engineering from **Leading University**
 
 **Grade**: 3.88 CGPA
 
