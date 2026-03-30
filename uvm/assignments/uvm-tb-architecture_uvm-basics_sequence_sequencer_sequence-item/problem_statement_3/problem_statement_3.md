@@ -13,6 +13,8 @@ Add constraints to:
 
 Use **`rand`** and **constraint blocks** appropriately to apply these constraints.
 
+---
+
 ## Solution:
 The solution is implemented as follows:
 
