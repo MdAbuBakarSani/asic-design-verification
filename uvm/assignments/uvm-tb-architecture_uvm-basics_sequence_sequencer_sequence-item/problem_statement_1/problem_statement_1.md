@@ -20,7 +20,7 @@ package alu_pkg;
   `include "uvm_macros.svh" 
   import uvm_pkg::*; 
 
---- ALU Sequencer ---
+// --- ALU Sequencer ---
 class alu_sequencer extends uvm_sequencer#(uvm_sequence_item); 
   `uvm_component_utils(alu_sequencer) 
   function new(string name, uvm_component parent);  
