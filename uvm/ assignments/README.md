@@ -1,4 +1,4 @@
-# UVM Assignments - Showcase of Skills and Problem Solving Flow 🎯
+## UVM Assignments - Showcase of Skills and Problem Solving Flow 🎯
 
 This folder contains assignments and problems related to **Universal Verification Methodology (UVM)**. The solutions here serve as a **demonstration of my understanding** of key concepts in **UVM**.
 
@@ -27,7 +27,7 @@ Each folder corresponds to a **different UVM topic**, and within each topic, the
 
 ---
 
-### 📌 How to Use:
+## 📌 How to Use:
 1. Navigate to the respective topic folder (e.g., `UVM_TB_Architecture/`).
 2. Inside each folder, you'll find:
    - **Problem statement files** (e.g., `problem_statement.1`)
