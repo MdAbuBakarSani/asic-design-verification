@@ -24,6 +24,9 @@ The solution is implemented as follows:
 // Code your testbench here 
 // or browse Examples
 
+// Package groups related classes into a reusable namespace; 
+// It avoids name conflicts, and makes importing easy into the testbench.
+
 package alu_pkg; 
   `include "uvm_macros.svh" 
   import uvm_pkg::*; 
