@@ -9,7 +9,7 @@ This repository showcases my projects from ASIC Design &amp; Verification traini
 The main objectives of this repository are:
 - To showcase the implementation of digital circuits and systems using **Verilog** and **SystemVerilog**.
 - To demonstrate the application of **UVM** for verifying complex designs.
-- To implement and verify **digital protocols** (AXI, APB, AHB) in various ASIC design scenarios.
+- To implement and verify **digital protocols** (UART, I2C, APB, AHB, AXI) in various ASIC design scenarios.
 - To provide a portfolio of **academic assignments** and **personal projects** on digital design, verification, and scripting.
 
 # 🧰 Tools Used
@@ -26,10 +26,12 @@ These tools were instrumental in the design, simulation, and verification of var
 
 # 👨‍💻 Author
 
-Md Abu Bakar Sani 
+**Name**:Md Abu Bakar Sani 
 
-Bachelor of Science in Electrical and Electronics Engineering
+**Bachelor of Science** in Electrical and Electronics Engineering
 
-Grade: 3.88 CGPA
+**Grade**: 3.88 CGPA
 
-🔗 LinkedIn Profile- (https://www.linkedin.com/in/md-abu-bakar-sani-448639177/)
+**Training**: ASIC Design & Verification Training at **ProV Logic**
+
+🔗 **LinkedIn Profile**: [https://www.linkedin.com/in/md-abu-bakar-sani-448639177/]
