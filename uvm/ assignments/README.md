@@ -1,6 +1,6 @@
 # UVM Assignments - Showcase of Skills and Problem Solving Flow 🎯
 
-This folder contains assignments and problems related to **Universal Verification Methodology (UVM)**. The solutions here serve as a **demonstration of my understanding** of key concepts in **UVM** and **SystemVerilog**.
+This folder contains assignments and problems related to **Universal Verification Methodology (UVM)**. The solutions here serve as a **demonstration of my understanding** of key concepts in **UVM**.
 
 ## 🔍 Purpose:
 The primary goal of this repository is to **showcase** the flow and structure of solving common verification problems using **UVM**. While the solutions may not represent **real-world, optimized designs**, they are intended to illustrate the **basic understanding** of how to approach and solve problems in **UVM**, with a focus on:
