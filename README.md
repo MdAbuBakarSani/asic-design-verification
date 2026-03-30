@@ -5,6 +5,7 @@
 
 This repository showcases my projects from ASIC Design &amp; Verification training at ProV Logic. It includes **Verilog/SystemVerilog design, UVM verification, protocols (UART, I2C, APB, AHB, AXI),** and **Perl scripting** for EDA automation, along with academic assignments on digital design.
 
+--------
 
 # 🎯 Objectives
 
@@ -14,6 +15,7 @@ The main objectives of this repository are:
 - To implement and verify **digital protocols** (UART, I2C, APB, AHB, AXI) in various ASIC design scenarios.
 - To provide a portfolio of **academic assignments** and **personal projects** on digital design, verification, and scripting.
 
+--------
 
 # 🧰 Tools Used
 
@@ -27,6 +29,7 @@ This repository showcases the use of the following tools and technologies in **A
 
 These tools were instrumental in the design, simulation, and verification of various digital systems and protocols.
 
+--------
 
 # 👨‍💻 Author
 
@@ -40,6 +43,7 @@ These tools were instrumental in the design, simulation, and verification of var
 
 🔗 **LinkedIn Profile**: [https://www.linkedin.com/in/md-abu-bakar-sani-448639177/]
 
+--------
 
 ## 💼 Training Experience
 
