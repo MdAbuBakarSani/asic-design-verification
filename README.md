@@ -26,12 +26,12 @@ These tools were instrumental in the design, simulation, and verification of var
 
 # 👨‍💻 Author
 
-**Name**: Md Abu Bakar Sani 
+- **Name**: Md Abu Bakar Sani 
 
-**Bachelor of Science** in Electrical and Electronics Engineering from **Leading University**
+- **Bachelor of Science** in Electrical and Electronics Engineering from **Leading University**
 
-**Grade**: 3.88 CGPA
+- **Grade**: 3.88 CGPA
 
-**Training**: ASIC Design & Verification Training at **ProV Logic**
+- **Training**: **10-month ASIC Design & Verification Training** at **ProV Logic**
 
 🔗 **LinkedIn Profile**: [https://www.linkedin.com/in/md-abu-bakar-sani-448639177/]
