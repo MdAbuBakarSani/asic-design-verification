@@ -1,4 +1,4 @@
-## UVM Assignments - Showcase of Skills and Problem Solving Flow 🎯
+# UVM Assignments - Showcase of Skills and Problem Solving Flow 🎯
 
 This folder contains assignments and problems related to **Universal Verification Methodology (UVM)**. The solutions here serve as a **demonstration of my understanding** of key concepts in **UVM**.
 
