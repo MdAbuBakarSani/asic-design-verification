@@ -30,7 +30,6 @@ Each folder corresponds to a **different UVM topic**, and within each topic, the
 ### 📌 How to Use:
 1. Navigate to the respective topic folder (e.g., `UVM_TB_Architecture/`).
 2. Inside each folder, you'll find **problem statement files** (e.g., `problem_statement.md`) and **solution code** (e.g., `solution.sv`).
-3. **Run simulations** using the provided **testbenches** to verify each solution. 🚀
 
  
 
