@@ -34,6 +34,5 @@ Each folder corresponds to a **different UVM topic**, and within each topic, the
 ---
 
 ### Tools Used:
-- **SystemVerilog**
-- **UVM (Universal Verification Methodology)**
+
 - **EDA Tools**: Questasim, ModelSim (for simulation)
