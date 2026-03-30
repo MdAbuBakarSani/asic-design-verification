@@ -35,6 +35,7 @@ class alu_agent extends uvm_agent;
 
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
+   
     if(!uvm_config_db #(uvm_active_passive_enum)::get(this, "", "is_active", is_active)) 
       is_active = UVM_ACTIVE; 
     mon = alu_monitor::type_id::create("mon", this); 
