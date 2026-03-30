@@ -35,3 +35,9 @@ These tools were instrumental in the design, simulation, and verification of var
 - **Training**: **10-month ASIC Design & Verification Training** at **ProV Logic**
 
 🔗 **LinkedIn Profile**: [https://www.linkedin.com/in/md-abu-bakar-sani-448639177/]
+
+## 💼 Training Experience
+
+- **10-month ASIC Design & Verification Training** at **ProV Logic**.
+- Focused on **Verilog**, **SystemVerilog**, **UVM verification**, **digital protocols** (UART, I2C, APB, AHB, AXI), and **Perl Scripting**.
+- **Major Project**: Single-Cycle RISC-V Processor, DDR Memory
