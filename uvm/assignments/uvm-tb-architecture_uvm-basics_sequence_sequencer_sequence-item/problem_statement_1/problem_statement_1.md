@@ -18,6 +18,8 @@ Create a **UVM agent** for a **4-bit ALU**. The agent must include:
 
 # Solution: UVM Agent for 4-bit ALU
 
+The solution is implemented as follows:
+
 ```systemverilog 
 package alu_pkg; 
   `include "uvm_macros.svh" 
