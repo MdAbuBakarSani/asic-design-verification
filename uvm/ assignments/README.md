@@ -3,17 +3,20 @@
 This folder contains assignments and problems related to **Universal Verification Methodology (UVM)**. The solutions here serve as a **demonstration of my understanding** of key concepts in **UVM**.
 
 ## 🔍 Purpose:
-The primary goal of this repository is to **showcase** the flow and structure of solving common verification problems using **UVM**. While the solutions may not represent **real-world, optimized designs**, they are intended to illustrate the **basic understanding** of how to approach and solve problems in **UVM**, with a focus on:
-- Testbench architecture 
-- Sequence and sequencer design 
-- Sequence item creation 
+The primary goal of this repository is to **showcase** the flow and structure of solving common verification problems using **UVM**. While the solutions may not represent **real-world, optimized designs**, they are intended to illustrate the **basic understanding** of how to approach and solve problems in **UVM**.
 
 ## 🛠️ Approach:
 Each folder corresponds to a **different UVM topic**, and within each topic, the problems are presented along with the **simplified solutions**. The following topics are covered:
 - **UVM Testbench Architecture** 
 - **UVM Basics** 
 - **UVM Sequence and Sequencer** 
-- **UVM Sequence Item** 
+- **UVM Sequence Item**
+- **UVM Phases**
+- **UVM Active & Passive Agents**
+- **TLM Port, Analysis Port**
+- **UVM Config Database**
+- **Factory Registration**
+- **Virtual Sequences and Sequencer**
 
 ## 📂 How the Problems are Organized:
 - **Problem Statements**: Each problem is followed by a clear statement explaining the task.
@@ -33,6 +36,4 @@ Each folder corresponds to a **different UVM topic**, and within each topic, the
 
 ---
 
-### Tools Used:
 
-- **EDA Tools**: Questasim, ModelSim (for simulation)
