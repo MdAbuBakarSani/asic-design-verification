@@ -22,13 +22,14 @@ package alu_pkg;
 
 // --- ALU Sequencer ---
 class alu_sequencer extends uvm_sequencer#(uvm_sequence_item); 
-  `uvm_component_utils(alu_sequencer) 
+  `uvm_component_utils(alu_sequencer)
+
   function new(string name, uvm_component parent);  
     super.new(name, parent);  
   endfunction 
 endclass 
 
-  ```
+// --- ALU Driver ---
 class alu_driver extends uvm_driver#(uvm_sequence_item); 
   `uvm_component_utils(alu_driver) 
   function new(string name, uvm_component parent);  
