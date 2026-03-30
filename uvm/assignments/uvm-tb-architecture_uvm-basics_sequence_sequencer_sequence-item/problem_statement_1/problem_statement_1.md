@@ -15,17 +15,20 @@ Create a **UVM agent** for a **4-bit ALU**. The agent must include:
 
 # Solution: UVM Agent for 4-bit ALU
 
+```
 package alu_pkg; 
   `include "uvm_macros.svh" 
   import uvm_pkg::*; 
-  
+
+```
 class alu_sequencer extends uvm_sequencer#(uvm_sequence_item); 
   `uvm_component_utils(alu_sequencer) 
   function new(string name, uvm_component parent);  
     super.new(name, parent);  
   endfunction 
 endclass 
-  
+
+  ```
 class alu_driver extends uvm_driver#(uvm_sequence_item); 
   `uvm_component_utils(alu_driver) 
   function new(string name, uvm_component parent);  
