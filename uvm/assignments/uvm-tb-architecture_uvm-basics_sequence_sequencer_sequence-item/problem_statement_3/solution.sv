@@ -4,7 +4,6 @@
 // Package groups related classes into a reusable namespace; 
 // It avoids name conflicts, and makes importing easy into the testbench. 
 
-
 package alu_seq_item_pkg; 
   `include "uvm_macros.svh" 
   import uvm_pkg::*; 
