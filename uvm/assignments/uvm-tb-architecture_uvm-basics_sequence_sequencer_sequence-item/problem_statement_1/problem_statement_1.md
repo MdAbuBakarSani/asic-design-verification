@@ -8,14 +8,6 @@ Create a **UVM agent** for a **4-bit ALU**. The agent must include:
 
 ---
 
-## Requirements:
-- Design a simple **4-bit ALU** agent.
-- **Driver** must interface with the sequencer to send data.
-- **Monitor** must capture DUT inputs and outputs.
-- Implement the agent to be **active** (performing tasks) or **passive** (only monitoring), controlled by the `is_active` flag.
-
----
-
 # Solution: 
 
 The solution is implemented as follows:
