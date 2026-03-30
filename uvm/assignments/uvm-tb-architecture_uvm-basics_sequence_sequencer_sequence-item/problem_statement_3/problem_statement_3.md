@@ -15,7 +15,7 @@ Use **`rand`** and **constraint blocks** appropriately to apply these constraint
 
 ---
 
-## Solution:
+# Solution:
 The solution is implemented as follows:
 
 ```SystemVerilog
