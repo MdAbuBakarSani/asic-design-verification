@@ -6,7 +6,7 @@ Modify the **ALU environment** to include a **coverage collector** that tracks a
 
 - Create a **UVM subscriber** (`opcode_coverage`) that collects **functional coverage** for the **opcode** field.
 - The **`opcode_coverage`** subscriber should:
-  1. **Sample** the **opcode** value for every transaction sent by the **driver**.
+  1. **Sample** the **opcode** value for every transaction.
   2. **Print** the coverage report at the end of the simulation using the **`report_phase()`**.
 
 ---
