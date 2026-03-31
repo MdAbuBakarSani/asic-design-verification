@@ -28,7 +28,7 @@ class alu_driver extends uvm_driver;
   // Get the next sequence item
       seq_item_port.get_next_item(pkt);
   
-  // Mark the item as done     
+  // If `delay_enable` is 1, apply a #10ns delay     
       if (delay_enable) #10ns;
       
   // Mark the item as done
