@@ -1,5 +1,5 @@
 
-# Problem 2: UVM Environment for 4-bit ALU with Scoreboard
+# Problem 02: UVM Environment for 4-bit ALU with Scoreboard
 
 ## Problem Breakdown:
 Build a **UVM environment** that:
