@@ -9,6 +9,8 @@
 
 The solution is implemented as follows:
 
+```SystemVerilog
+
 // Code your testbench here
 // or browse Examples
 
