@@ -72,14 +72,3 @@ class alu_env extends uvm_env;
     agt.mon.analysis_port.connect(scb.mon_imp); 
   endfunction 
 endclass
-
-
-
-
-
-
-
-
-
-
-
