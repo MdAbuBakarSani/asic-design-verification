@@ -84,4 +84,3 @@ module tb_alu_sequence_item;
     end 
   end 
 endmodule
-
