@@ -7,7 +7,6 @@ Create a **UVM sequence** that generates and sends **10 randomized ALU operation
 The sequence should:
 
 - **Randomize** the `operand_a`, `operand_b`, and `opcode` for each operation.
-- **Send the generated ALU operation** by calling the **`start_item`** and **`finish_item`** methods.
 - **Start the sequence** from the **test class** using the **`start()`** method during the **`run_phase()`**.
 
 ---
