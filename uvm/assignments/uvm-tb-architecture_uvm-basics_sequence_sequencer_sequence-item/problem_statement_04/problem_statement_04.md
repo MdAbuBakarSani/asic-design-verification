@@ -1,1 +1,25 @@
+# Problem 04: UVM Sequence for ALU Operations
+
+## Problem Statement:
+
+Create a **UVM sequence** that generates and sends **10 randomized ALU operations** using the sequence item from **Problem 03**.
+
+The sequence should:
+
+- **1. Randomize** the `operand_a`, `operand_b`, and `opcode` for each operation.
+- **2. Send the generated ALU operation** by calling the **`start_item`** and **`finish_item`** methods.
+- **3. Start the sequence** from the **test class** using the **`start()`** method during the **`run_phase()`**.
+
+---
+
+# Solution:
+
+The solution is implemented as follows:
+
+```SystemVerilog
+
+
+
+
+
 
