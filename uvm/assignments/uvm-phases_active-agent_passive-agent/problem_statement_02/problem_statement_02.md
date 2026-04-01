@@ -11,7 +11,7 @@ Modify the **environment** to make the same agent configurable as either **activ
 
 ---
 
-## Solution:
+# Solution:
 
 The solution is implemented as follows:
 
