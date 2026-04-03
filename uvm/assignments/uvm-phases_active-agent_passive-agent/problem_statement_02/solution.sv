@@ -4,7 +4,7 @@
 `include "uvm_macros.svh" 
 import uvm_pkg::*; 
 
-// Agent Class: Can be configured as either active or passive
+// --- Agent Class: Can be configured as either active or passive ---
 class bus_agent extends uvm_agent; 
   `uvm_component_utils(bus_agent) 
 
@@ -19,22 +19,22 @@ class bus_agent extends uvm_agent;
     super.new(name, parent); 
   endfunction 
 
-  // Build phase: Configuring the agent as active or passive
+  // --- Build phase: Configuring the agent as active or passive ---
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
 
- // Get virtual interface (vif) from config_db 
+    // --- Get virtual interface (vif) from config_db ---
     if(!uvm_config_db#(virtual bus_if)::get(this, "", "vif", vif)) 
       `uvm_fatal("No Virtual Interface", "bus agent") 
 
- // Get the active/passive configuration from the config_db
+ // --- Get the active/passive configuration from the config_db ---
       void'(uvm_config_db#(uvm_active_passive_enum)::(this, "", "is_active", is_active)); 
 
- // Instantiate the monitor, which is common for both active and passive agents
+ // --- Instantiate the monitor, which is common for both active and passive agents ---
     mon = bus_monitor::type_id::create("mon", this); 
     uvm_config_db#(virtual bus_if)::set(this, "mon", "vif", vif); 
 
-  // If is_active == UVM_ACTIVE, instantiate the sequencer and driver 
+  // --- If is_active == UVM_ACTIVE, instantiate the sequencer and driver ---
     if(is_active == UVM_ACTIVE) begin 
       seqr = bus_sequencer::type_id::create("seqr", this); 
       drv = bus_driver::type_id::create("drv", this);    
@@ -42,11 +42,11 @@ class bus_agent extends uvm_agent;
     end 
   endfunction 
 
-  // Connect phase: Connecting sequencer to driver if active
+  // --- Connect phase: Connecting sequencer to driver if active ---
   function void connect_phase (uvm_phase phase); 
     super.connect_phase (phase); 
 
-  // If the agent is active, connect the driver and sequencer
+  // --- If the agent is active, connect the driver and sequencer ---
     if(is_active == UVM_ACTIVE) begin 
       drv.seq_item_port.connect(seqr.seq_item_export); 
     end 
