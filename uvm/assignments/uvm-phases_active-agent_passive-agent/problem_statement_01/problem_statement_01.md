@@ -30,7 +30,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh" 
 import uvm_pkg::*; 
 
-// --- Active Agent: Generates stimulus for the DUT ---
+// === Active Agent: Generates stimulus for the DUT ===
 class bus_active_agent extends uvm_agent; 
   `uvm_component_utils(bus_active_agent) 
   
@@ -43,7 +43,7 @@ class bus_active_agent extends uvm_agent;
     super.new(name, parent); 
   endfunction 
 
-// --- Build phase for the active agent ---
+// === Build phase for the active agent ===
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
 
@@ -58,14 +58,14 @@ class bus_active_agent extends uvm_agent;
     uvm_config_db#(virtual bus_if)::set(this, "mon", "vif", vif); 
   endfunction 
 
-// --- Connect phase for the active agent --- 
+// === Connect phase for the active agent === 
   function void connect_phase (uvm_phase phase); 
     super.connect_phase(phase); 
     drv.seq_item_port.connect(seqr.seq_item_export); 
   endfunction 
 endclass 
 
-// --- Passive Agent: Observes transactions --- 
+// === Passive Agent: Observes transactions === 
 class bus_passive_agent extends uvm_agent; 
   `uvm_component_utils(bus_passive_agent) 
  
@@ -76,7 +76,7 @@ class bus_passive_agent extends uvm_agent;
     super.new(name, parent); 
   endfunction 
 
-// --- Build phase for the passive agent ---
+// === Build phase for the passive agent ===
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
 
