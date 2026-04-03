@@ -15,13 +15,13 @@ class alu_sequence_specific_operation extends uvm_sequence#(alu_sequence_item);
     alu_sequence_item pkt; 
     pkt = alu_sequence_item::type_id::create("pkt"); 
     start_item (pkt);  
-// --- Constrain opcode to be either 2 or 3 while randomizing other fields ---
+// === Constrain opcode to be either 2 or 3 while randomizing other fields ===
     assert (pkt.randomize() with {opcode inside {[2, 3]}}); 
     finish_item (pkt); 
   endtask 
 endclass
   
-// --- Starting it from the test ---
+// === Starting it from the test ===
   alu_sequence_specific_operation item;  
   item = alu_sequence_specific_operation::type_id::create("item");   
   item.start(env.agt.seqr);
