@@ -8,7 +8,7 @@ package alu_pkg;
   `include "uvm_macros.svh" 
   import uvm_pkg::*; 
 
-  // --- ALU Sequencer ---
+// === ALU Sequencer ===
 class alu_sequencer extends uvm_sequencer#(uvm_sequence_item); 
   `uvm_component_utils(alu_sequencer) 
   
@@ -17,7 +17,7 @@ class alu_sequencer extends uvm_sequencer#(uvm_sequence_item);
   endfunction 
 endclass 
 
-  // --- ALU Driver ---
+// === ALU Driver ===
 class alu_driver extends uvm_driver#(uvm_sequence_item); 
   `uvm_component_utils(alu_driver) 
   
@@ -26,7 +26,7 @@ class alu_driver extends uvm_driver#(uvm_sequence_item);
   endfunction 
 endclass 
 
-  // --- ALU Monitor ---
+// === ALU Monitor ===
 class alu_monitor extends uvm_component; 
   `uvm_component_utils(alu_monitor) 
   
@@ -35,7 +35,7 @@ class alu_monitor extends uvm_component;
   endfunction 
 endclass 
 
-  // --- ALU Agent ---
+// === ALU Agent ===
 class alu_agent extends uvm_agent; 
   `uvm_component_utils(alu_agent)
   
@@ -47,7 +47,7 @@ class alu_agent extends uvm_agent;
     super.new(name, parent); 
   endfunction 
 
-   // --- Build Phase ---
+// === Build Phase ===
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
    
@@ -61,7 +61,7 @@ class alu_agent extends uvm_agent;
     end 
   endfunction 
 
-  // --- Connect Phase ---
+// === Connect Phase ===
   function void connect_phase(uvm_phase phase); 
     super.connect_phase(phase); 
     
@@ -69,5 +69,4 @@ class alu_agent extends uvm_agent;
       drv.seq_item_port.connect (seqr.seq_item_export); 
   endfunction 
 endclass 
-endpackage  
-
+endpackage 
