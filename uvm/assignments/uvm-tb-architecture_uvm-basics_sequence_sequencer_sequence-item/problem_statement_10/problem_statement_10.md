@@ -16,13 +16,14 @@ From the **test class**, use a **virtual sequence** to call both sequences back-
 The solution is implemented as follows:
 
 ```systemverilog
+
 // Code your testbench here 
 // or browse Examples 
 
 `include "uvm_macros.svh" 
-import uvm_pkg::*;
- 
-// Random Sequence 
+import uvm_pkg::*; 
+
+// === Random Sequence ===
 class random_sequence extends uvm_sequence#(alu_sequence_item); 
   `uvm_object_utils(random_sequence) 
 
@@ -38,7 +39,7 @@ class random_sequence extends uvm_sequence#(alu_sequence_item);
   endtask 
 endclass 
  
-// Corner-Case Sequence
+// === Corner-Case Sequence ===
 class corner_case_sequence extends uvm_sequence#(alu_sequence_item); 
   `uvm_object_utils(corner_case_sequence) 
   
@@ -54,7 +55,7 @@ class corner_case_sequence extends uvm_sequence#(alu_sequence_item);
   endtask 
 endclass 
 
-// Virtual Sequence to Call Both Sequences Back-to-Back
+// === Virtual Sequence to Call Both Sequences Back-to-Back  ===
 class virtual_sequence extends uvm_sequence; 
   `uvm_object_utils(virtual_sequence) 
 
@@ -68,9 +69,11 @@ class virtual_sequence extends uvm_sequence;
 
   task body(); 
    
-// Create random and corner-case sequences
+// === Create random and corner-case sequences === 
     rseq = random_sequence::type_id::create("rseq"); 
     cseq = corner_case_sequence::type_id::create("cseq"); 
-// Start both sequences back-to-back
+
+// === Start both sequences back-to-back ===
+    
   endtask 
 endclass
