@@ -49,4 +49,4 @@ These tools were instrumental in the design, simulation, and verification of var
 
 - **10-month ASIC Design & Verification Training** at **ProV Logic**.
 - Focused on **Verilog**, **SystemVerilog**, **UVM verification**, **digital protocols** (UART, I2C, APB, AHB, AXI), and **Perl Scripting**.
-- **Major Project**: Single-Cycle RISC-V Processor, DDR Memory
+- **Major Project**: Single-Cycle RISC-V Processor
