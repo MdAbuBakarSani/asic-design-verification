@@ -12,6 +12,8 @@ In the **environment's `connect_phase`**, make the required TLM connections for 
 
 # Solution:
 
+The solution is implemented as follows:
+
 ```systemverilog
 
 // Code your testbench here 
