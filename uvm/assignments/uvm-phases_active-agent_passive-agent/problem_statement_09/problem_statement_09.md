@@ -12,6 +12,8 @@ Create a reusable **base agent class** with an **`is_active`** flag.
 
 # Solution:
 
+The solution is implemented as follows:
+
 ```systemverilog
 
 // Code your testbench here 
