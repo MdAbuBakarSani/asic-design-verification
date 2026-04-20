@@ -42,7 +42,7 @@ class bus_scoreboard extends uvm_scoreboard;
   function void write (bus_transaction tr); 
 
 // === Logs that transaction was received ===
-    `uvm_info ("Scoreboard", $sformatf("Received transaction in run phase: %s", tr.covert2string()), UVM_LOW) 
+    `uvm_info ("Scoreboard", $sformatf("Received transaction in run phase: %s", tr.convert2string()), UVM_LOW) 
 
 // === Stores transaction for checking later ===
     collected_transaction.push_back(tr); 
