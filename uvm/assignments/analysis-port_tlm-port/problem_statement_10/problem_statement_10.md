@@ -10,14 +10,6 @@ Implement a **parallel scoreboard** setup where **two scoreboards** receive the 
 
 -----
 
-## Status:
-⚠️ Partially Solved
-
-## Note:
-The broadcasting setup is implemented correctly, but the second scoreboard does not yet perform a real **sequence-order check**. 
-
-------
-
 # Solution:
 
 The solution is implemented as follows:
