@@ -48,7 +48,9 @@ class my_driver extends uvm_driver #(my_transaction);
   endfunction
     virtual task put(my_transaction tr);
       `uvm_info("Driver", $sformatf("Driving transaction: %s", tr.convert2string()), UVM_LOW)
+
 // === Drive DUT here ===
+
   endtask
 endclass
 
@@ -66,6 +68,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
     repeat (5) begin
       req = my_transaction::type_id::create("req");
       assert(req.randomize());
+
 // === Call put() on the sequencer's port  ===  
       `uvm_info("Sequence", $sformatf("Sending item: %s", req.convert2string()), UVM_LOW)
       p_sequencer.put_port.put(req);
