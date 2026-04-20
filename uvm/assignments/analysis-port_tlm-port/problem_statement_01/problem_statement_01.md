@@ -12,6 +12,8 @@ Implement a **monitor** that sends transactions to a **scoreboard** using a **`u
 
 # Solution:
 
+The solution is implemented as follows:
+
 ```systemverilog
 
 
