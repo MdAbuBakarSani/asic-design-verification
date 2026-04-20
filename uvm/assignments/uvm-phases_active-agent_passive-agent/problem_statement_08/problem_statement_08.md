@@ -19,6 +19,14 @@ Validate that:
 
 ----
 
+## Status:
+⚠️ Partially Solved
+----
+
+## Note:
+The test-side `uvm_config_db` setup is implemented, but the full environment and validation code are not shown here.
+----
+
 # Solution:
 
 The solution is implemented as follows:
