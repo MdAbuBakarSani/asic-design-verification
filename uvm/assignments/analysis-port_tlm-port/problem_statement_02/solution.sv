@@ -33,9 +33,3 @@ class my_scoreboard extends uvm_scoreboard;
     collected_transaction.push_back(tr);
   endfunction
 endclass
-  
-    
-
-
-
-
