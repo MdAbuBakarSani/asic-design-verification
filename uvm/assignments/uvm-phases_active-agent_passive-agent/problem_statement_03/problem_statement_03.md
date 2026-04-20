@@ -26,6 +26,7 @@ import uvm_pkg::*;
 task run_phase (uvm_phase phase); 
 bus_transaction tr;   // Declare transaction handle
   forever begin
+
 // === Get next transaction from sequencer ===
 seq_item_port.get_next_item(tr);
 
@@ -51,7 +52,3 @@ $display("Monitor => Capturing transaction at %0t simulation time.", $time);
 // === The monitor waits for a clock edge, so its timestamp appears later than the driver ===
 end 
 endtask
-
-
-
-
