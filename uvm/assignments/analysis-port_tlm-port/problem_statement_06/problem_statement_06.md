@@ -13,7 +13,6 @@ Build a **passive agent** with a **monitor** that sends data using **`uvm_analys
 ## Status:
 ⚠️ Partially Solved
 
-----
 
 ## Note:
 The **statistics collector** is implemented correctly, but the **passive agent**, **monitor**, and the **analysis port connection** are not shown in this solution snippet.
