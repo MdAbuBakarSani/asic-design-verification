@@ -11,7 +11,7 @@ Implement a **scoreboard** that waits until **`check_phase`** to evaluate result
 
 ----
 
-## Solution:
+# Solution:
 
 The solution is implemented as follows:
 
