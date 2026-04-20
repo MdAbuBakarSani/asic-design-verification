@@ -12,4 +12,6 @@ Create a **UVM testbench** where:
 
 # Solution:
 
+The solution is implemented as follows:
+
 ```systemverilog
