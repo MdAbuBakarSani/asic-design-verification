@@ -11,7 +11,7 @@ Connect **two monitors** to a single **scoreboard** using separate **`uvm_analys
 
 ----
 
-## Solution:
+# Solution:
 
 The solution is implemented as follows:
 
