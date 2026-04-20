@@ -34,7 +34,8 @@ class bus_scoreboard extends uvm_scoreboard;
   function void check_phase (uvm_phase phase); 
     super.check_phase(phase); 
 
-    foreach (collected_transaction[i]) 
+    foreach (collected_transaction[i]) begin
       $display("Scoreboard  => Check Phase => Transaction checked: %p", collected_transaction[i]);
+    end
   endfunction 
 endclass
