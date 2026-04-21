@@ -14,10 +14,3 @@ Design an **agent** that switches from **active** to **passive** dynamically usi
 
 ## Status:
 Not Solved Yet
-
------
-
-## Note:
-This problem is currently unsolved. I will revisit and update the solution later.
-
-
