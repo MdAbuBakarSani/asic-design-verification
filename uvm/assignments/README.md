@@ -36,7 +36,7 @@ Each folder corresponds to a **different UVM topic**, and within each topic, the
 # 📌 How to Use
 1. Navigate to the respective topic folder (e.g., `UVM_TB_Architecture/`).
 2. Inside each folder, you'll find:
-   - **Problem statement files** (e.g., `problem_statement_1.md`)
+   - **Problem statement files** (e.g., `problem_statement_01.md`)
    - **Solution code files** (e.g., `solution.sv`).
 
  
