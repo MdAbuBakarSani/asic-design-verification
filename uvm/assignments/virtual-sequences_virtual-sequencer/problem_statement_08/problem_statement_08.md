@@ -8,7 +8,6 @@ Use **factory override** to replace a **base virtual sequence** with a **custom 
 - Create a **custom virtual sequence** that extends the base one
 - Register both using **`uvm_object_utils`**
 - Apply **factory override** in the **test**
-- Create the base virtual sequence using the factory
 - Verify at runtime which sequence is actually created using **`get_type_name()`**
 
 -----
