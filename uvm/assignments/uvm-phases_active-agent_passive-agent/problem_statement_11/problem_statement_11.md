@@ -14,8 +14,3 @@ Create a **single agent** that can act as either **active** or **passive** based
 
 ## Status:
 Not Solved Yet
-
-----
-
-## Note:
-This problem is currently unsolved. I will revisit and update the solution later.
