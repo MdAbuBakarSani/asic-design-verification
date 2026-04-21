@@ -43,7 +43,7 @@ class my_environment extends uvm_env;
 // === Build phase creates scoreboard using factory ===
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    scb = base_scoreboard::type_id::create("scb", this);
+    scb = my_scoreboard::type_id::create("scb", this);
   endfunction
 endclass
 
