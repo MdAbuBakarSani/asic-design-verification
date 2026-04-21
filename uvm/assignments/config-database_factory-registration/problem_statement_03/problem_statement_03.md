@@ -15,6 +15,3 @@ Implement a **testbench** where the **sequence type** to run is passed using **`
 
 ## Status:
 Not Solved Yet
-
-## Note:
-This problem is currently unsolved. I will revisit and update the solution later.
