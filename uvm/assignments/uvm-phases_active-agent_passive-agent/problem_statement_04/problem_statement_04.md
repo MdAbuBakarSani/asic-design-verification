@@ -14,9 +14,3 @@ Build an **agent** that logs the transition between **`UVM_ACTIVE`** and **`UVM_
 
 ## Status:
 Not Solved Yet
-
------
-
-## Note:
-This problem is currently unsolved. I will revisit and update the solution later.
-
