@@ -16,48 +16,38 @@ Create a **SystemVerilog class** to generate random **4-digit numbers** that are
 The solution is implemented as follows:
 
 ```systemverilog
-
 class DivisibleBy11;
-
-  // Random variable
   rand int number;
 
-  // Constraint block
+// === Constraint block ===
   constraint range {
-    // Ensure number is a 4-digit value
     number inside {[1000:9999]};
-
-    // Ensure number is divisible by 11
     number % 11 == 0;
   }
 
-  // Method to randomize and display the value
+// === Method to randomize and display the value ===
   function void display();
 
-    // Try randomization
     if (!this.randomize())
       $display("Randomization failed!");
     else
       $display("Random 4-digit number divisible by 11 : %0d", number);
 
   endfunction
-
 endclass
 
 
 // === Testbench ===
 
 module tb_divisible_by_11;
-
   DivisibleBy11 num;
 
   initial begin
     num = new();
 
-    // Generate 10 random values
+// === Generate 10 random values ===
     repeat (10) begin
       num.display();
     end
   end
-
 endmodule
