@@ -13,13 +13,7 @@ Pass this object from the **test** to the **environment** using **`uvm_config_db
 - The **environment** should retrieve it using **`uvm_config_db`**
 - In the environment’s **`build_phase`**, use the config fields to **conditionally construct subcomponents**
 
-## Status:
-⚠️ Partially Solved
-
-## Note:
-The configuration object is defined and passed through `uvm_config_db`, but the current snippet does not yet show:
-- actual values assigned to `enable_scoreboard` and `enable_coverage`
-- conditional construction of scoreboard and coverage components in `build_phase`
+-------
 
 # Solution:
 
