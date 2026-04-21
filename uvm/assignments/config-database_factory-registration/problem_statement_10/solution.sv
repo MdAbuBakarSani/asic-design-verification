@@ -53,13 +53,13 @@ class my_test extends uvm_test;
   
   my_environment env;
 
-// === Build phase applies name-based override before environment creation ===
+// === Build phase ===
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
 // === Override my_scoreboard with derived_scoreboard using type names ===
-    uvm_factory::get().set_type_override_by_name("my_scoreboard", "derived_scoreboard");
-    
+// === Factory overrides must be set before object creation ===
+    uvm_factory::get().set_type_override_by_name("my_scoreboard", "derived_scoreboard");  
     env = my_environment::type_id::create("env", this);
   endfunction
 
