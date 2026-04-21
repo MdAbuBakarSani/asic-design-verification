@@ -38,7 +38,7 @@ Each folder corresponds to a **different SystemVerilog topic**, and within each 
 # 📌 How to Use
 1. Navigate to the respective topic folder (e.g., `Randomization_Constraints/`).
 2. Inside each folder, you'll find:
-   - **Problem statement files** (e.g., `problem_01.md`)
+   - **Problem statement files** (e.g., `problem_statement_1.md`)
    - **Solution files** (e.g., `solution.sv`)
 
 --------
