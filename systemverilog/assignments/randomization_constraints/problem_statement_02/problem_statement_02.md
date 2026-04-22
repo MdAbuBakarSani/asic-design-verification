@@ -36,11 +36,13 @@ class IPAddress;
 }
 
     // Method to randomize and display IP 
-  function void display ();
+    function void display ();
+        
     if (!this.randomize())
         $display ("Randomization failed!");
     else
         $display ("Random IP Address : %0d.%0d.%0d.%0d", seg1, seg2, seg3, seg4);
+        
 endfunction
 endclass
 
