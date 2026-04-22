@@ -61,14 +61,19 @@ endmodule
 ```text
 Random 6-character alphanumeric string:
 F89NBy
+
 Random 6-character alphanumeric string:
 Rhk5Hc
+
 Random 6-character alphanumeric string:
 z1f7NF
+
 Random 6-character alphanumeric string:
 twdzFr
+
 Random 6-character alphanumeric string:
 XIsL07
+
 ```
 ---
 
