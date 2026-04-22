@@ -12,7 +12,7 @@ Write a **SystemVerilog class** with constraints to generate random **IP address
 
 -------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -56,3 +56,19 @@ IPAddress ip;
     end
 end
 endmodule
+```
+---
+## Sample Output:
+
+```text
+Random IP Address : 89.120.23.242
+Random IP Address : 155.202.186.208
+Random IP Address : 78.83.147.102
+Random IP Address : 27.176.177.150
+Random IP Address : 21.209.75.222
+```
+---
+
+## Observation:
+
+All generated IP addresses follow the defined constraints. The first segment remains within the valid range (1 to 223) and excludes 127, while the remaining segments are within 0 to 255.
