@@ -11,7 +11,7 @@ Create a **SystemVerilog class** to randomize a **3-digit number** such that:
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 // Code your testbench here 
 // or browse Examples 
