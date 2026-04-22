@@ -4,9 +4,9 @@
 
 Randomize a **student profile** with the following fields:
 
-- **Name** (enum type)
-- **Age** between 15 and 25
-- **Marks** between 0 and 100
+- **Name** 
+- **Age** 
+- **Marks** 
 - Apply a condition:
   - If **age < 20**, then **marks must be greater than 70**
 - Display the generated student details
