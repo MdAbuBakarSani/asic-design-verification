@@ -57,6 +57,7 @@ XORBytes values;
    end
 endmodule
 
+```
 --------
 
 ## Sample Output:
