@@ -20,7 +20,9 @@ class PrimeDigitsSum;
   function void display();
     if (!this.randomize())
       $display("Randomization failed!");
-    else begin
+    else begin 
+      
+      // Extract digits
       tens = numbers / 10;
       units = numbers % 10;
       sum = tens + units;
