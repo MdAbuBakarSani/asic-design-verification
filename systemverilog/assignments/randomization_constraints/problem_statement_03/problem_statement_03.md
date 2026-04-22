@@ -11,7 +11,7 @@ Write a **SystemVerilog class** that generates **5 unique random integers** betw
 
 ------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -56,3 +56,28 @@ UniqueRandom5 values;
     end
 end
 endmodule
+```
+---
+## Sample Output:
+
+```text
+5 unique random numbers between 1 to 20
+17, 12, 8, 10, 3
+
+5 unique random numbers between 1 to 20
+1, 3, 4, 5, 17
+
+5 unique random numbers between 1 to 20
+3, 13, 10, 17, 7
+
+5 unique random numbers between 1 to 20
+1, 17, 18, 9, 7
+
+5 unique random numbers between 1 to 20
+4, 9, 19, 18, 13
+```
+---
+
+## Observation:
+
+All generated values are within the range 1 to 20 and no duplicates appear within each set, confirming that both range and uniqueness constraints are correctly enforced.
