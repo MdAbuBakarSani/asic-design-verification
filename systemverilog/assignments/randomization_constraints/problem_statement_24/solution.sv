@@ -15,8 +15,7 @@ class StudentProfile;
     age inside {[15:25]};
     marks inside {[0:100]};
    
-    // Conditional constraint
-    if (age < 20) marks > 70;
+    if (age < 20) marks > 70;     // Conditional constraint
   }
  
   // Method to randomize and display values
