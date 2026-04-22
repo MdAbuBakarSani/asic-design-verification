@@ -2,12 +2,17 @@
 // or browse Examples
 
 class UniqueRandom5;
+
+// === Array of 5 random integers ===
 rand bit [4:0] arr[5];
 
+// === Constraint block ===
 constraint range {
     unique {arr};
     foreach (arr[i]) arr[i] inside {[1:20]};
 }
+
+// === Method to randomize and display the value ===    
 function void display();
     if (!this.randomize())
         $display ("Randomization failed!");
@@ -20,13 +25,15 @@ function void display();
 endfunction
 endclass
 
+// === Testbench ===
 module tb_unique_random_5;
 UniqueRandom5 values;
     initial begin
         values = new();
+
+// === Generate 5 different sets ===
         repeat(5) begin
         values.display();
     end
 end
 endmodule
-
