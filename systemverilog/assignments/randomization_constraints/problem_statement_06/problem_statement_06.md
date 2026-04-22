@@ -12,7 +12,7 @@ Create a **SystemVerilog class** that generates a random **date** with:
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 // Code your testbench here 
 // or browse Examples 
