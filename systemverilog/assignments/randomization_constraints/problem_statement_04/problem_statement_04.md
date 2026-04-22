@@ -64,21 +64,15 @@ endmodule
 
 ```text
 Random Bytes:
-
 Byte 1 = 0x77 (119)
-
 Byte 2 = 0x97 (151)
-
 Byte 3 (Byte1 ^ Byte2) = 0xe0 (224)
 
 
 
 Random Bytes:
-
 Byte 1 = 0x42 (66)
-
 Byte 2 = 0x8b (139)
-
 Byte 3 (Byte1 ^ Byte2) = 0xc9 (201)
 
 ```
