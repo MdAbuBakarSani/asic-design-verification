@@ -11,7 +11,7 @@ Randomize a number between **1 and 500** such that:
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 
 // Code your testbench here 
