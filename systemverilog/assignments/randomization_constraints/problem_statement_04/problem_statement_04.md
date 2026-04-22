@@ -62,7 +62,7 @@ endmodule
 
 # Sample Output:
 
-
+```text
 Random Bytes:
 
 Byte 1 = 0x77 (119)
