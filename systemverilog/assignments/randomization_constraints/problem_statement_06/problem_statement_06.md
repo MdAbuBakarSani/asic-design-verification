@@ -8,7 +8,6 @@ Create a **SystemVerilog class** that generates a random **date** with:
 - Month between **1 to 12**
 - Year fixed at **2024**
 - Ensure **February has at most 29 days**
-- Ensure months with 30 days are handled correctly
 
 ---
 
