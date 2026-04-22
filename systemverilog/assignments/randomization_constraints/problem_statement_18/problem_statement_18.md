@@ -6,7 +6,7 @@ Write a **SystemVerilog class** to generate a **5-bit number** such that:
 
 - The number contains **more 1s than 0s**
 - Display the number in **binary and decimal format**
-- Also display the **count of 1s**
+
 
 ---
 
