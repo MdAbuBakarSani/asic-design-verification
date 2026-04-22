@@ -5,7 +5,7 @@
 Create a **SystemVerilog class** to generate a **4-bit number** such that:
 
 - The number contains **exactly two bits set to 1**
-- Display the number in both **binary and decimal format**
+- Display the number 
 
 ---
 
