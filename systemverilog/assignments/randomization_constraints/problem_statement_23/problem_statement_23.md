@@ -44,8 +44,8 @@ module tb;
   GrayCode digits;
   initial begin
     digits = new();
-    // Generate 5 random values
-    repeat(5) begin
+    // Generate 3 random values
+    repeat(3) begin
       digits.display();
     end
   end
@@ -58,8 +58,6 @@ endmodule
 Binary: 00110 | Gray Code: 00101
 Binary: 00101 | Gray Code: 00111
 Binary: 00011 | Gray Code: 00010
-Binary: 10100 | Gray Code: 11110
-Binary: 11111 | Gray Code: 10000
 ```
 ---
 
