@@ -60,7 +60,7 @@ endmodule
 ```
 --------
 
-# Sample Output:
+## Sample Output:
 
 
 Random Bytes:
@@ -80,3 +80,8 @@ Byte 1 = 0x42 (66)
 Byte 2 = 0x8b (139)
 
 Byte 3 (Byte1 ^ Byte2) = 0xc9 (201)
+
+
+
+## Observation:
+Byte3 consistently equals the XOR of Byte1 and Byte2, confirming correct implementation of the bitwise XOR operation.
