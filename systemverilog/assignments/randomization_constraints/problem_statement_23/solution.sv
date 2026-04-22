@@ -28,8 +28,8 @@ module tb;
   GrayCode digits;
   initial begin
     digits = new();
-    // Generate 5 random values
-    repeat(5) begin
+    // Generate 3 random values
+    repeat(3) begin
       digits.display();
     end
   end
