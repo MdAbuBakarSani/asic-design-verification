@@ -10,7 +10,7 @@ Generate an **8-bit variable** such that:
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 
 // Code your testbench here 
