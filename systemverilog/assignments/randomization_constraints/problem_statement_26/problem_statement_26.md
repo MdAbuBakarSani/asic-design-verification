@@ -73,4 +73,4 @@ Random 2-digit number: 67 (Digits: 6 + 7 = 13)
 
 ## Observation:
 
-All generated numbers are valid 2-digit values and their digit sums are prime numbers, confirming correct implementation of arithmetic and membership-based constraints.
+All generated numbers are valid 2-digit values and their digit sums are prime numbers, confirming correct implementation of constraints.
