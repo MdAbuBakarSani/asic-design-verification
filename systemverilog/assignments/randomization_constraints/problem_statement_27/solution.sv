@@ -2,7 +2,8 @@
 // or browse Examples 
 
 // Define vowel enum with ASCII values
-typedef enum byte {A_LOWER = "a", E_LOWER = "e", I_LOWER = "i", O_LOWER = "o", U_LOWER = "u",  A_UPPER = "A", E_UPPER = "E", I_UPPER = "I", O_UPPER = "O", U_UPPER = "U"} vowel;
+typedef enum byte {A_LOWER = "a", E_LOWER = "e", I_LOWER = "i", O_LOWER = "o", U_LOWER = "u",  
+                   A_UPPER = "A", E_UPPER = "E", I_UPPER = "I", O_UPPER = "O", U_UPPER = "U"} vowel;
 
 class VowelStringGeneration;
 
