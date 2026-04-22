@@ -4,9 +4,7 @@
 
 Randomize a **student profile** with the following fields:
 
-- **Name** 
-- **Age** 
-- **Marks** 
+- **Name**, **Age**, **Marks** 
 - Apply a condition:
   - If **age < 20**, then **marks must be greater than 70**
 - Display the generated student details
