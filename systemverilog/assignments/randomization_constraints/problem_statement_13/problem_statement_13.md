@@ -1,4 +1,4 @@
-# Problem 13: Generate a Valid Random IP Address with First Byte Constraint
+# Problem 13: Generate a Valid Random IP Address
 
 ## Problem Statement:
 
