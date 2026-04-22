@@ -11,7 +11,7 @@ Create a **SystemVerilog class** to generate random **4-digit numbers** that are
 
 -------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -55,3 +55,23 @@ module tb_divisible_by_11;
     end
   end
 endmodule
+```
+---
+## Sample Output:
+
+```text
+Random 4-digit number divisible by 11 : 9955
+Random 4-digit number divisible by 11 : 1562
+Random 4-digit number divisible by 11 : 7029
+Random 4-digit number divisible by 11 : 7568
+Random 4-digit number divisible by 11 : 2013
+Random 4-digit number divisible by 11 : 6776
+Random 4-digit number divisible by 11 : 7128
+Random 4-digit number divisible by 11 : 8591
+Random 4-digit number divisible by 11 : 5456
+Random 4-digit number divisible by 11 : 1760
+```
+----
+## Observation:
+
+All generated numbers fall within the 4-digit range and are divisible by 11, confirming that both range and divisibility constraints are correctly applied.
