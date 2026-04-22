@@ -14,7 +14,7 @@ Randomize a **student profile** with the following fields:
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 
 // Code your testbench here 
