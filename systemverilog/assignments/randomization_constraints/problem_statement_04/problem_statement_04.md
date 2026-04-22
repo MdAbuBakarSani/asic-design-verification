@@ -10,7 +10,7 @@ Generate **3 random bytes** such that the **third byte** is the **XOR** of the f
 
 -------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -60,7 +60,7 @@ endmodule
 ```
 --------
 
-# Sample Output:
+## Sample Output:
 
 ```text
 Random Bytes:
@@ -81,8 +81,8 @@ Byte 2 = 0x8b (139)
 
 Byte 3 (Byte1 ^ Byte2) = 0xc9 (201)
 
-
+```
 --------
 
-# Observation:
+## Observation:
 Byte3 consistently equals the XOR of Byte1 and Byte2, confirming correct implementation of the bitwise XOR operation.
