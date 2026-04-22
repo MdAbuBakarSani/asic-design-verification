@@ -12,8 +12,6 @@ class StudentProfile;
  
   // Constraint block
   constraint range_conditions{
-    
-    // Range constraints
     age inside {[15:25]};
     marks inside {[0:100]};
    
