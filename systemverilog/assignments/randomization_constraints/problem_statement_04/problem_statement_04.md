@@ -21,19 +21,19 @@ The solution is implemented as follows:
 
 class XORBytes;
 
-// === Random bytes ===
-rand bit [7:0] byte1, byte2;
+    // Random bytes 
+    rand bit [7:0] byte1, byte2;
 
-// === Byte3 (not randomized) ===
-bit [7:0] byte3;
+    // Byte3 (not randomized) 
+    bit [7:0] byte3;
 
-// === Method to randomize and display values ===
-function void display();
+    // Method to randomize and display values 
+    function void display();
     if (!this.randomize())
         $display ("Randomization failed!");
     else begin
 
-// === Compute XOR result ===
+        // Compute XOR result 
         byte3 = byte1 ^ byte2;
       
         $display ("Random Bytes: ");
@@ -44,13 +44,13 @@ function void display();
 endfunction
 endclass
 
-// === Testbench ===
+// Testbench
 module tb_xor_bytes;
 XORBytes values;
     initial begin
       values = new();
 
-// === Generate 2 sets of values ===
+        // Generate 2 sets of values 
       repeat(2) begin
       values.display();
      end
