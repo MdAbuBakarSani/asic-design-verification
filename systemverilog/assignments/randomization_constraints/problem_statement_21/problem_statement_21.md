@@ -69,18 +69,14 @@ endmodule
 Random 4-digit (Even-Odd-Even-Odd):
 2507
 
-
 Random 4-digit (Even-Odd-Even-Odd):
 4983
-
 
 Random 4-digit (Even-Odd-Even-Odd):
 2147
 
-
 Random 4-digit (Even-Odd-Even-Odd):
 8501
-
 
 Random 4-digit (Even-Odd-Even-Odd):
 8925
