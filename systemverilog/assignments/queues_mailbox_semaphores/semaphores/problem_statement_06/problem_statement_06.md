@@ -67,9 +67,13 @@ endmodule
 ## Sample Output:
 ```text
 Mechanism 1 getting ready at 0ns.
+
 Mechanism 2 waiting....
+
 Mechanism 1 send signal at 10ns.
+
 Mechanism 2 received signal at 20ns.
+
 Mechanism 2 finished at 30ns.
 ```
 ---
