@@ -1,4 +1,4 @@
-# Mailbox Problem 01: Transfer Mixed Data Types Using Mailbox
+# Problem 01: Transfer Mixed Data Types Using Mailbox
 
 ## Problem Statement:
 
