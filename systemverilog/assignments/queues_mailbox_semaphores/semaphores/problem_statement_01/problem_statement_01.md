@@ -12,6 +12,7 @@ Create **semaphores** with different numbers of keys:
 ---
 
 ## Solution:
+The solution is implemented as follows:
 
 ```systemverilog
 
