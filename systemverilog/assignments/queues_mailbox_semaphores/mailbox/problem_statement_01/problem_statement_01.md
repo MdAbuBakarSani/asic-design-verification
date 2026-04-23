@@ -13,6 +13,7 @@ Create a **SystemVerilog mailbox** to transfer different types of data between t
 
 ## Solution:
 
+The solution is implemented as follows:
 ```systemverilog
 
 // Code your testbench here 
