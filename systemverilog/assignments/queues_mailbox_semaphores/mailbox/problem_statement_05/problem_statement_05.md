@@ -14,7 +14,7 @@ Create a **testbench** to demonstrate **inter-thread communication** using a **S
 ---
 
 ## Solution:
-
+The solution is implemented as follows:
 ```systemverilog
 
 
