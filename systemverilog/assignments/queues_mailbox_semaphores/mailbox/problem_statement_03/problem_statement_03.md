@@ -1,4 +1,4 @@
-# Mailbox Problem 03: Producer-Consumer Model Using Mailbox
+# Problem 03: Producer-Consumer Model Using Mailbox
 
 ## Problem Statement:
 
