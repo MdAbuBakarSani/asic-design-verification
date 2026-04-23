@@ -1,4 +1,4 @@
-# Semaphore Problem 02: Demonstrate Semaphore Built-in Methods
+# Problem 02: Demonstrate Semaphore Built-in Methods
 
 ## Problem Statement:
 
