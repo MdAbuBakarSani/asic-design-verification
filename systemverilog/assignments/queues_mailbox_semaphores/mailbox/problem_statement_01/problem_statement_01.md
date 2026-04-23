@@ -86,4 +86,4 @@ Retrieved data: 10101011
 
 ## Observation:
 
-The mailbox successfully transfers multiple data types between parallel processes. Data is retrieved in the same order it was inserted, demonstrating FIFO behavior and proper synchronization using put() and get() operations.
+The mailbox successfully transfers multiple data types between parallel processes. Data is retrieved in the same order it was inserted, demonstrating FIFO behavior and proper synchronization using put() and get() methods.
