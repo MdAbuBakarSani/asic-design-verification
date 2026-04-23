@@ -77,19 +77,33 @@ endmodule
 ## Sample Output:
 ```text
 Procedure [1] requests 3 key(s) at 0 ns.
+
 Procedure [1] ACQUIRED 3 at 0 ns.
+
 Procedure [2] requests 2 key(s) at 0 ns.
+
 Procedure [3] requests 1 key(s) at 0 ns.
+
 Procedure [3] ACQUIRED 1 at 0 ns.
+
 Procedure [4] requests 2 key(s) at 0 ns.
+
 Procedure [5] requests 1 key(s) at 0 ns.
+
 Procedure [1] RELEASED 3 at 10 ns.
+
 Procedure [3] RELEASED 1 at 10 ns.
+
 Procedure [2] ACQUIRED 2 at 10 ns.
+
 Procedure [4] ACQUIRED 2 at 10 ns.
+
 Procedure [2] RELEASED 2 at 20 ns.
+
 Procedure [4] RELEASED 2 at 20 ns.
+
 Procedure [5] ACQUIRED 1 at 20 ns.
+
 Procedure [5] RELEASED 1 at 30 ns.
 ```
 ---
