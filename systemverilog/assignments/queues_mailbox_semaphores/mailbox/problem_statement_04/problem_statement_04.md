@@ -1,4 +1,4 @@
-# Mailbox Problem 04: Implement a Priority-Based Message Passing System Using a Mailbox
+# Problem 04: Implement a Priority-Based Message Passing System Using a Mailbox
 
 ## Problem Statement:
 
