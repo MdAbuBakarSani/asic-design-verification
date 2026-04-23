@@ -62,7 +62,6 @@ Put data: 5 | Count = 2
 Received data: 3 | Count = 1
 
 try_get(): 5 successful | Count = 0
-
 ```
 ---
 
