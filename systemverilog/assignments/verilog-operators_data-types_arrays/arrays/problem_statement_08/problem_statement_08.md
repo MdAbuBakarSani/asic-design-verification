@@ -97,4 +97,4 @@ array.num() after delete = 4
 
 ## Observation:
 
-The associative array methods correctly manage and inspect key-value entries. num() and size() return the number of stored elements, exists() checks whether an index is present, and first(), last(), next() and prev() allow index navigation. The delete() method removes the selected entry from the array.
+The associative array methods correctly manage and inspect key-value entries. `num()` and `size()` return the number of stored elements, `exists()` checks whether an index is present, and `first()`, `last()`, `next()` and `prev()` allow index navigation. The `delete()` method removes the selected entry from the array.
