@@ -43,9 +43,6 @@ endmodule
 
 ## Sample Output:
 ```text
-## Sample Output:
-
-```text
 Static Unpacked Array Elements:
 array_8x8[7][7] = 1
 array_8x8[7][6] = 0
