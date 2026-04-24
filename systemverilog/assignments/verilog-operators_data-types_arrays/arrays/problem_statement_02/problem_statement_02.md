@@ -1,4 +1,4 @@
-# Array Problem 02: Packed Union with 8-bit Data
+# Problem 02: Packed Union with 8-bit Data
 
 ## Problem Statement:
 
