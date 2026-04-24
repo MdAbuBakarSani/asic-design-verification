@@ -4,9 +4,7 @@
 
 Create a **fixed-size array** of size 4 and assign values to it.
 
-- Declare a fixed-size array
-- Initialize it with predefined values
-- Display all elements using iteration
+
 ---
 
 ## Solution:
