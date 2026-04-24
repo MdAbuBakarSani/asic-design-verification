@@ -71,4 +71,4 @@ array_8x8 = '{'{1, 0, 0, 0, 1, 0, 1, 1},
 
 ## Observation:
 
-The static unpacked array stores each bit as an individual element accessed using two indices. The output confirms that values are assigned across all rows and columns, and the full array can also be displayed using %p.
+The static unpacked array stores each bit as an individual element accessed using two indices. The output confirms that values are assigned across all rows and columns, and the full array can also be displayed using `%p`.
