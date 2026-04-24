@@ -7,9 +7,6 @@ module Dynamic_Array_Example;
 
   initial begin
 
-    // Allocate memory
-    arr = new[5];
-
     // Assign values
     arr = '{5, 10, 15, 20, 25};
 
