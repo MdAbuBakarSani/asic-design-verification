@@ -7,6 +7,7 @@ Create **dynamic arrays** for:
 - `string`
 - `integer`
 
+Initialize each of size 5 and assign some values
 ---
 
 ## Solution:
