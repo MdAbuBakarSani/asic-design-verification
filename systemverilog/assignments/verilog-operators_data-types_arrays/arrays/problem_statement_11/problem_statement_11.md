@@ -37,6 +37,7 @@ module Array_Reduction_Methods;
     $display("Sum of Integer Array is : %0d", int_arr.sum());
     $display("Product of Integer Array is : %0d", int_arr.product());
 
+
     // Bit array operations
     $display("Original Statement of Bit Array is : %p", bit_arr);
 
