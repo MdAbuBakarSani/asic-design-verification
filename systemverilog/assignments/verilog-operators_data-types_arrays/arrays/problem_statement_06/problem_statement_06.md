@@ -66,4 +66,4 @@ Name[4] = Diana, Result[4] = 66
 
 ## Observation:
 
-Dynamic arrays allow memory allocation at runtime using new[]. They provide flexibility in size management while maintaining structured access through indexing and iteration.
+Dynamic arrays allow memory allocation at runtime using new[ ]. They provide flexibility in size management while maintaining structured access through indexing and iteration.
