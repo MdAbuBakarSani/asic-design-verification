@@ -8,6 +8,7 @@ Create **dynamic arrays** for:
 - `integer`
 
 Initialize each of size 5 and assign some values
+
 ---
 
 ## Solution:
