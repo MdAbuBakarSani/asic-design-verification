@@ -20,9 +20,7 @@ Each folder corresponds to a **different SystemVerilog topic**, and within each 
 - **Semaphores**
 - **OOP Concepts**
 - **Randomization & Constraints**
-- **Interface**
-- **Virtual Interface**
-- **Fork Join**
+
 
 --------
 
