@@ -1,4 +1,4 @@
-# Problem 03: Create an Array with 10 Elements
+# Problem 01: Create an Array with 10 Elements
 
 ## Problem Statement:
 
