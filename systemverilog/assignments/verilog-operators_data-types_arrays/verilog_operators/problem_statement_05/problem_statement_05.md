@@ -70,4 +70,4 @@ Arithmetic Right Shift (b >>> 1) : 1100 >>> 1 = 1110
 
 ## Observation:
 
-Shift operators move bits left or right. Logical shifts (<<, >>) insert zeros, while arithmetic right shift (>>>) preserves the sign bit for signed values. Arithmetic left shift behaves similarly to logical left shift but operates on signed data.
+Shift operators move bits left or right. Logical shifts (`<<`, `>>`) insert zeros, while arithmetic right shift (`>>>`) preserves the sign bit for signed values. Arithmetic left shift behaves similarly to logical left shift but operates on signed data.
