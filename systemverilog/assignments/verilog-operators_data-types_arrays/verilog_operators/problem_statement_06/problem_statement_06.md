@@ -7,11 +7,7 @@ Write a SystemVerilog program to demonstrate:
 - Increment operator `++`
 - Decrement operator `--`
 
-Types to cover:
-- Post-increment (`a++`)
-- Pre-increment (`++a`)
-- Post-decrement (`a--`)
-- Pre-decrement (`--a`)
+
 
 
 
