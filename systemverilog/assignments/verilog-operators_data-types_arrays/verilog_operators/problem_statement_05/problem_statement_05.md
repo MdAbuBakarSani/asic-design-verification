@@ -9,10 +9,6 @@ Write a SystemVerilog program to demonstrate **shift operators**:
 - Arithmetic left shift `<<<`
 - Arithmetic right shift `>>>`
 
-Requirements:
-- Use both unsigned and signed variables
-- Display results clearly
-- Show how shifting affects bit patterns
 
 ---
 
