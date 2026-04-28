@@ -70,4 +70,4 @@ Bi-implication: (a == b) = 0 (true when both are equal)
 
 ## Observation:
 
-Logical operators evaluate Boolean conditions. While !, &&, and || are native operators, implication and bi-implication are derived forms implemented using logical equivalence. These operators are widely used in assertions, conditions, and verification logic.
+Logical operators evaluate Boolean conditions. While `!`, `&&`, and `||` are native operators, implication and bi-implication are derived forms implemented using logical equivalence. These operators are widely used in assertions, conditions, and verification logic.
