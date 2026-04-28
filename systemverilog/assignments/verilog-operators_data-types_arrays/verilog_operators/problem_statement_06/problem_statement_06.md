@@ -68,4 +68,4 @@ After Pre-Decrement : a = 7
 
 ## Observation:
 
-Increment and decrement operators change the value of a variable by one. Pre-operations modify the value before evaluation while post-operations modify it after evaluation. In standalone statements both appear similar but their difference becomes important when used inside expressions.
+Increment and decrement operators change the value of a variable by one. Pre-operations modify the value before evaluation while post-operations modify it after evaluation. 
