@@ -1,4 +1,4 @@
-# Problem 01: Continuous Assignment using wire
+# Problem 01: Continuous Assignment using wire data type
 
 ## Problem Statement:
 
