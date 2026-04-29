@@ -64,4 +64,4 @@ longint e = 650123
 
 ## Observation:
 
-All these data types are signed by default, meaning they can represent both positive and negative values. The size of each type determines the range of values it can store.
+All these data types are **signed by default**, meaning they can represent both positive and negative values. The size of each type determines the range of values it can store.
