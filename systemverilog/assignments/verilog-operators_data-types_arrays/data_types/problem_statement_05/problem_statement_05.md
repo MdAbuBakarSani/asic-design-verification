@@ -59,4 +59,4 @@ longint d = 650123
 
 ## Observation:
 
-Unsigned data types can only represent **non-negative values**. They allocate all bits for magnitude, increasing the positive range compared to signed types.
+Unsigned data types can only represent **non-negative values**. 
