@@ -64,6 +64,6 @@ Result: String 1 is greater than String 2
 
 The `.compare()` method compares two strings **lexicographically** and returns:
 
-`0` → strings are equal
-`< 0` → first string is smaller
-`> 0` → first string is greater
+- `0` → strings are equal
+- `< 0` → first string is smaller
+- `> 0` → first string is greater
