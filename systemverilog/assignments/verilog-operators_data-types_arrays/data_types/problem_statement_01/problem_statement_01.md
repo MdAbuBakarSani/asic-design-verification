@@ -3,7 +3,7 @@
 ## Problem Statement:
 
 Write a SystemVerilog program to demonstrate **continuous assignment** using the `wire` data type.
-
+- Display inputs and output clearly
 ---
 
 ## Solution:
