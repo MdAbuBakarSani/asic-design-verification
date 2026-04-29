@@ -2,9 +2,8 @@
 
 ## Problem Statement:
 
-Write a SystemVerilog program to:
+Write a SystemVerilog program to declare a string variable.  
 
-- Declare a string variable  
 - Assign the value:  
   **"I am learning SV data type"**  
 - Display the string using `$display`
