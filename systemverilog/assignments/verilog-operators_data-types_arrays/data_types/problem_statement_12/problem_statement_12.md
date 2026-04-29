@@ -2,14 +2,9 @@
 
 ## Problem Statement:
 
-Write a SystemVerilog program to:
+Write a SystemVerilog program to compare two strings using a built-in method  
 
-- Declare two strings  
-- Compare them using a built-in method  
-- Display whether:
-  - Strings are equal  
-  - String 1 is less than String 2  
-  - String 1 is greater than String 2  
+  
 
 ---
 
