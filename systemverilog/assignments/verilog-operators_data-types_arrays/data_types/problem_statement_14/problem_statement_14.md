@@ -68,4 +68,4 @@ Modules Value: 2 (shift_amount)
 
 ## Observation:
 
-Enums provide a way to represent named constants, improving readability and debugging.
+Enums provide a way to represent **named constants**, improving readability and debugging.
