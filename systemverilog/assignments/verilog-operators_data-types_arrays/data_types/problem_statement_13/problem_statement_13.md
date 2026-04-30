@@ -1,4 +1,18 @@
+# Problem 13: Extract Substring in SystemVerilog
 
+## Problem Statement:
+
+Write a SystemVerilog program to:
+
+- Declare a string  
+- Extract a substring from **8th to 14th position**  
+- Display both original string and extracted substring  
+
+---
+
+## Solution:
+The solution is implemented as follows:
+```systemverilog
 
 
 // Code your testbench here 
@@ -18,3 +32,17 @@ module Substring_Example;
 
   end
 endmodule
+```
+---
+
+## Sample Output:
+```text
+Original String: I am a trainee at ProV Logic
+
+Substring (8th to 14th position): trainee
+```
+---
+
+## Observation:
+
+The `.substr(start, end)` method extracts characters from the given range including both start and end indices.
