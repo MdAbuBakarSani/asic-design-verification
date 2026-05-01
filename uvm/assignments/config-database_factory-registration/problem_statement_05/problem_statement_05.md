@@ -10,7 +10,7 @@ Use **`uvm_config_db`** to pass a **virtual interface** from the **top module** 
 
 -------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -22,13 +22,13 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Interface Definition ===
+// Interface Definition 
  interface my_vif;
    logic clk;      // Clock signal
    logic rst_n;    // Active-low reset signal
  endinterface
 
-// === Driver Class === 
+// Driver Class 
 class my_driver extends uvm_driver#(uvm_sequence_item);
   `uvm_component_utils(my_driver)
   
@@ -38,7 +38,7 @@ class my_driver extends uvm_driver#(uvm_sequence_item);
     super.new(name, parent);
   endfunction
 
-// === Build phase retrieves virtual interface from config_db ===
+ // Build phase retrieves virtual interface from config_db 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     if (!uvm_config_db#(virtual my_vif)::get(this, "", "vif", vif))
@@ -48,40 +48,41 @@ class my_driver extends uvm_driver#(uvm_sequence_item);
   endfunction
 endclass
 
-// === Environment Class ===
+// Environment Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   my_driver drv;
 
-// === Build phase creates driver ===
+ // Build phase creates driver 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     drv = my_driver::type_id::create("drv", this);
   endfunction
 endclass
 
-// === Test Class ===
+// Test Class 
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
   my_environment env;
 
-// === Build phase creates environment ===
+ // Build phase creates environment 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     env = my_environment::type_id::create("env", this);
   endfunction
 endclass
 
-// === Top Module ===
+// Top Module 
 module top;
   my_vif my_vif_port();   // Instantiates interface
 
 
   initial begin
-// === Pass virtual interface from top module to UVM testbench ===
+   // Pass virtual interface from top module to UVM testbench 
     uvm_config_db#(virtual my_vif)::set(null, "*", "vif", my_vif_port);
 
-// === Start UVM test ===
+   // Start UVM test 
     run_test("my_test");
   end
 endmodule
+```
