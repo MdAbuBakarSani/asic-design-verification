@@ -13,7 +13,7 @@ Use **`uvm_config_db`** to send a **complex configuration object** such as **`tr
 
 ----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
