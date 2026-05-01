@@ -15,7 +15,7 @@ Create an **environment with two agents**. Write a **virtual sequence** that ran
 
 ------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -27,7 +27,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Transaction Class ===
+// Transaction Class 
 class my_transaction extends uvm_sequence_item;
   `uvm_object_utils(my_transaction)
   
@@ -36,7 +36,7 @@ class my_transaction extends uvm_sequence_item;
   endfunction
 endclass
 
-// === Read Sequencer ===
+// Read Sequencer 
 class read_sequencer extends uvm_sequencer#(my_transaction);
   `uvm_component_utils(read_sequencer)
   
@@ -45,7 +45,7 @@ class read_sequencer extends uvm_sequencer#(my_transaction);
   endfunction
 endclass
 
-// === Write Sequencer ===
+// Write Sequencer 
 class write_sequencer extends uvm_sequencer#(my_transaction);
   `uvm_component_utils(write_sequencer)
   
@@ -54,7 +54,7 @@ class write_sequencer extends uvm_sequencer#(my_transaction);
   endfunction
 endclass
 
-// === Read Sequence ===
+// Read Sequence 
 class read_sequence extends uvm_sequence#(my_transaction);
   `uvm_object_utils(read_sequence)
   
@@ -62,13 +62,13 @@ class read_sequence extends uvm_sequence#(my_transaction);
     super.new(name);
   endfunction
 
-// === Sequence body ===
+  // Sequence body 
   task body();
     `uvm_info("Read Sequence", "Running", UVM_LOW)
   endtask
 endclass
 
-// === Write Sequence ===
+// Write Sequence 
 class write_sequence extends uvm_sequence#(my_transaction);
   `uvm_object_utils(write_sequence)
   
@@ -76,13 +76,13 @@ class write_sequence extends uvm_sequence#(my_transaction);
     super.new(name);
   endfunction
 
-// === Sequence body ===
+  // Sequence body 
   task body();
     `uvm_info("Write Sequence", "Running", UVM_LOW)
   endtask
 endclass
 
-// === Virtual Sequencer ===
+// Virtual Sequencer 
 class virtual_sequencer extends uvm_sequencer#(uvm_sequence_item);
   `uvm_component_utils(virtual_sequencer)
   
@@ -94,7 +94,7 @@ class virtual_sequencer extends uvm_sequencer#(uvm_sequence_item);
   endfunction
 endclass
 
-// === Virtual Sequence ===
+// Virtual Sequence 
 class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
   `uvm_declare_p_sequencer(virtual_sequencer)
   `uvm_object_utils(virtual_sequence)
@@ -103,14 +103,14 @@ class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
     super.new(name);
   endfunction
 
-// === Body randomly chooses which sequence to run ===
+  // Body randomly chooses which sequence to run 
   task body();
     int sel = $urandom_range(0, 2);    // Randomly selects 0, 1, or 2
     
     read_sequence rs = read_sequence::type_id::create("rs");
     write_sequence ws = write_sequence::type_id::create("ws");
 
-// === Decide what to run based on random value ===
+    // Decide what to run based on random value 
     case (sel)
       0: rs.start (p_sequencer.read_seqr);      // Run only read sequence
       1: ws.start (p_sequencer.write_seqr);     // Run only write sequence
@@ -121,3 +121,4 @@ class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
     endcase 
   endtask
 endclass
+```
