@@ -14,7 +14,7 @@ In the **environment class**, use **`uvm_config_db`** to pass an **`is_active`**
 
 -----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
