@@ -4,7 +4,7 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Driver Class ===
+// Driver Class 
 class my_driver extends uvm_driver#(my_transaction);
   `uvm_component_utils(my_driver)
   int num_packets;    // Stores number of packets to generate
@@ -13,13 +13,13 @@ class my_driver extends uvm_driver#(my_transaction);
     super.new(name, parent);
   endfunction
 
-// === Build phase retrieves num_packets from config_db ===
+  // Build phase retrieves num_packets from config_db 
   function void build_phase (uvm_phase phase);
     super.build_phase(phase);  
     uvm_config_db#(int)::get(this, " ", "num_packets", 12);
   endfunction
 
-// === Run phase generates num_packets number of transactions ===
+  // Run phase generates num_packets number of transactions
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
     repeat (num_packets) begin
@@ -32,7 +32,7 @@ class my_driver extends uvm_driver#(my_transaction);
   endtask
 endclass
 
-// === Environment Class ===
+// Environment Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   my_driver drv;
@@ -41,14 +41,14 @@ class my_environment extends uvm_env;
     super.new(name,parent); 
   endfunction
 
-// === Build phase creates driver ===
+  // Build phase creates driver 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     drv = my_driver::type_id::create("drv", this);
   endfunction
 endclass
 
-// === Test Class ===
+// Test Class 
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
   my_environment env;
@@ -57,7 +57,7 @@ class my_test extends uvm_test;
     super.new(name,parent); 
   endfunction
 
-// === Build phase sets num_packets and creates environment ===
+  // Build phase sets num_packets and creates environment 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     uvm_config_db#(int)::set(this, "env.drv", "num_packets", 12);
