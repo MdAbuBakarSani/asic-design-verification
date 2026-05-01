@@ -12,7 +12,7 @@ Register a child class of the driver such as **`custom_driver`** using the facto
 
 -----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
