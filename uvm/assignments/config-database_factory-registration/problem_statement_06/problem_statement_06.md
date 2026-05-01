@@ -14,7 +14,7 @@ Also:
 
 -------
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
