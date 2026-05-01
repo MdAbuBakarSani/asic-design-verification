@@ -9,7 +9,7 @@ Chain multiple **monitors** together:
 - **Monitor2** then sends the transaction again to a third component such as a **scoreboard**
 - Demonstrate an **intermediate transformation** of the transaction inside **Monitor2**
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -21,11 +21,11 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Monitor 1 ===
+// Monitor 1
 class monitor_1 extends uvm_monitor;
   `uvm_component_utils(monitor_1)
 
-// === Analysis port to send transactions ===
+  // Analysis port to send transactions 
   uvm_analysis_port#(my_transaction)mon_ap;
   
   function new(string name, uvm_component parent);
@@ -33,7 +33,7 @@ class monitor_1 extends uvm_monitor;
     mon_ap = new("mon_ap", this);
   endfunction
 
-// === Run phase continuously creates and sends transactions ===
+  // Run phase continuously creates and sends transactions
   task run_phase (uvm_phase phase);
     forever begin
       my_transaction tr;
@@ -43,7 +43,7 @@ class monitor_1 extends uvm_monitor;
   endtask
 endclass
 
-// === Monitor 2 ===
+// Monitor 2 
 class monitor_2 extends uvm_monitor;
   `uvm_component_utils(monitor_2)
   uvm_analysis_imp#(my_transaction, monitor_2)imp;   // Receives transactions from monitor_1
@@ -55,14 +55,14 @@ class monitor_2 extends uvm_monitor;
     mon_ap = new("mon_ap", this);
   endfunction
 
-// === This function is called when monitor_1 sends a transaction ===
+  // This function is called when monitor_1 sends a transaction
   function void write(my_transaction tr);
       tr.op_code = 1;
     mon_ap.write(tr);
   endfunction
 endclass
 
-// === Environmrnt Class ===
+// Environmrnt Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
  
@@ -74,7 +74,7 @@ class my_environment extends uvm_env;
     super.new(name, parent);
   endfunction
 
-// === Build phase creates all components ===
+  // Build phase creates all components 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     m1 = monitor_1::type_id::create("m1",  this);
@@ -82,10 +82,11 @@ class my_environment extends uvm_env;
     scb = my_scoreboard::type_id::create("scb", this);
   endfunction
 
-// === Connect phase makes the analysis connections ===
+  // Connect phase makes the analysis connections 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
     m1.mon_ap.connect(m2.imp);   // M1 → M2 (receive)
     m2.mon_ap.connect(scb.imp);  // M2 → SCB (forward)
   endfunction
 endclass
+```
