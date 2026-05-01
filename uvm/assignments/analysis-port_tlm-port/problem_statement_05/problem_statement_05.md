@@ -11,7 +11,7 @@ Transfer sequence items using **`put()`** and verify correctness.
 
 ----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -23,7 +23,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Sequencer Class ===
+// Sequencer Class 
 class my_sequencer extends uvm_sequencer #(my_transaction);
   `uvm_component_utils(my_sequencer)
 
@@ -35,11 +35,11 @@ class my_sequencer extends uvm_sequencer #(my_transaction);
   endfunction
 endclass
 
-// === Driver Class ===
+// Driver Class 
 class my_driver extends uvm_driver #(my_transaction);
   `uvm_component_utils(my_driver)
 
-// === Will be connected to sequencer.put_port ===
+  // Will be connected to sequencer.put_port
   uvm_blocking_put_imp #(my_transaction, my_driver) put_imp;
 
   function new(string name, uvm_component parent);
@@ -48,13 +48,13 @@ class my_driver extends uvm_driver #(my_transaction);
   endfunction
     virtual task put(my_transaction tr);
       `uvm_info("Driver", $sformatf("Driving transaction: %s", tr.convert2string()), UVM_LOW)
-
-// === Drive DUT here ===
-
-  endtask
+      
+      // Drive DUT here 
+ 
+    endtask
 endclass
 
-// === Sequence Class ===
+// Sequence Class 
 class my_sequence extends uvm_sequence #(my_transaction);
   `uvm_object_utils(my_sequence)
   `uvm_declare_p_sequencer(my_sequencer)
@@ -68,10 +68,12 @@ class my_sequence extends uvm_sequence #(my_transaction);
     repeat (5) begin
       req = my_transaction::type_id::create("req");
       assert(req.randomize());
-
-// === Call put() on the sequencer's port  ===  
+      
+      // Call put() on the sequencer's port  
       `uvm_info("Sequence", $sformatf("Sending item: %s", req.convert2string()), UVM_LOW)
       p_sequencer.put_port.put(req);
     end
   endtask
 endclass
+
+```
