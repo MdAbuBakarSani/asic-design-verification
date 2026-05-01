@@ -11,7 +11,7 @@ Modify your **scoreboard** so that it logs **mismatched transactions** using a *
 
 -----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -26,10 +26,10 @@ import uvm_pkg::*;
 class my_scoreboard extends uvm_scoreboard;
   `uvm_component_utils(my_scoreboard)
 
-// === Analysis implementation port used to receive transactions from monitor ===
+  // Analysis implementation port used to receive transactions from monitor 
   uvm_analysis_imp #(my_transaction, my_scoreboard) imp;
 
-// === FIFO used to store only mismatched transactions ===
+  // FIFO used to store only mismatched transactions 
   uvm_tlm_fifo #(my_transaction) mismatch_fifo;
 
   function new(string name, uvm_component parent);
@@ -38,14 +38,14 @@ class my_scoreboard extends uvm_scoreboard;
     mismatch_fifo = new("mismatch_fifo", this, 16); // depth 16
   endfunction
 
-// === This function is called whenever a transaction is received ===
+  // This function is called whenever a transaction is received 
   function void write(my_transaction tr);
     if (tr.expected != tr.actual) begin
       void'(mismatch_fifo.try_put(tr));   // <-- function-safe
     end
   endfunction
 
-// === Extract phase is used to print all stored mismatches at the end of simulation ===
+  // Extract phase is used to print all stored mismatches at the end of simulation 
   function void extract_phase(uvm_phase phase);
     my_transaction tr;
     while (mismatch_fifo.try_get(tr)) begin
@@ -53,3 +53,4 @@ class my_scoreboard extends uvm_scoreboard;
     end
   endfunction
 endclass
+```
