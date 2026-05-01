@@ -13,7 +13,7 @@ Create a component such as a **coverage collector** that subscribes to the **mon
 
 ----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -25,11 +25,11 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Coverage Collector ===
+// Coverage Collector 
 class coverage_collector extends uvm_subscriber#(my_transaction);
   `uvm_component_utils(coverage_collector)
 
-// === Covergroup to collect coverage for op_code field ===
+  // Covergroup to collect coverage for op_code field 
   covergroup opcode_cov;
     coverpoint op_code {bins sel = {3};}
   endgroup
@@ -39,7 +39,7 @@ class coverage_collector extends uvm_subscriber#(my_transaction);
     opcode_cov = new();
   endfunction
 
-// === Write function receives transactions from monitor through analysis connection ===
+  // Write function receives transactions from monitor through analysis connection
   function void write (my_transaction tr);
     if (tr.op_code == 3) begin
       opcode_cov.sample();
@@ -48,7 +48,7 @@ class coverage_collector extends uvm_subscriber#(my_transaction);
   endfunction
 endclass
 
-// === Environment Class ===
+// Environment Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   
@@ -60,7 +60,7 @@ class my_environment extends uvm_env;
     super.new(name, parent);
   endfunction
 
-// === Build Phase ===
+  // Build Phase 
   function void build_phase (uvm_phase phase);
     super.build_phase (phase);
     mon = my_monitor::type_id::create("mon", this);
@@ -68,10 +68,11 @@ class my_environment extends uvm_env;
     cov = coverage_collector::type_id::create("cov", this);
   endfunction
 
-// === Connect Phase ===
+  // Connect Phase 
   function void connect_phase (uvm_phase phase);
     super.connect_phase(phase);
     mon.mon_ap.connect(scb.imp);    // Connects monitor to scoreboard
     mon.mon_ap.connect(cov.analysis_export);    // Connects monitor to coverage collector
   endfunction
 endclass
+```
