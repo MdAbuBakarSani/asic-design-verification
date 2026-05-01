@@ -10,7 +10,7 @@ Override a **base sequence** such as **`base_seq`** with an extended sequence su
 
 -----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -22,7 +22,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Base Sequence ===
+// Base Sequence 
 class base_sequence extends uvm_sequence#(uvm_sequence_item);
   `uvm_object_utils(base_sequence)
   
@@ -30,12 +30,12 @@ class base_sequence extends uvm_sequence#(uvm_sequence_item);
     super.new(name); 
   endfunction
 
-// === Body task ===
+  // Body task 
     `uvm_info("Sequence", "BASE sequence", UVM_LOW)
   endtask
 endclass
 
-// === Burst Sequence ===
+// Burst Sequence 
 class burst_sequence extends base_sequence;
   `uvm_object_utils(burst_sequence)
   
@@ -43,13 +43,13 @@ class burst_sequence extends base_sequence;
     super.new(name); 
   endfunction
 
-// === Body task ===
+  // Body task 
   task body();
     `uvm_info("Sequence", "BURST sequence", UVM_LOW)
   endtask
 endclass
 
-// === Sequencer Class ===
+// Sequencer Class 
 class my_sequencer extends uvm_sequencer#(uvm_sequence_item);
   `uvm_component_utils(my_sequencer)
   
@@ -58,7 +58,7 @@ class my_sequencer extends uvm_sequencer#(uvm_sequence_item);
   endfunction
 endclass
 
-// === Environment Class ===
+// Environment Class
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
 
@@ -69,7 +69,7 @@ class my_environment extends uvm_env;
     super.new(name, parent);
   endfunction
 
-// === Build phase creates both sequencers ===
+  // Build phase creates both sequencers 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     seqr1 = my_sequencer::type_id::create("seqr1", this);
@@ -77,19 +77,19 @@ class my_environment extends uvm_env;
   endfunction
 endclass
 
-// === Test Class ===
+// Test Class 
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
   my_environment env;
 
-// === Build phase creates environment and sets instance override ===
+  // Build phase creates environment and sets instance override 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     env = my_environment::type_id::create("env", this);
     uvm_factory::get().set_inst_override_by_type(base_sequence ::get_type(), burst_sequence::get_type(), "env.seqr1");
   endfunction
 
-// === Run phase creates two base_sequence objects and starts them on different sequencers ===
+  // Run phase creates two base_sequence objects and starts them on different sequencers 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
 
@@ -106,7 +106,8 @@ class my_test extends uvm_test;
   endtask
 endclass
 
-// === Top Module ===
+// Top Module 
 module top;
   initial run_test("my_test");
 endmodule
+```
