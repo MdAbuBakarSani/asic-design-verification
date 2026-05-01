@@ -11,7 +11,7 @@ Create a **base environment** class and extend it as **`custom_env`**.
 
 ----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
