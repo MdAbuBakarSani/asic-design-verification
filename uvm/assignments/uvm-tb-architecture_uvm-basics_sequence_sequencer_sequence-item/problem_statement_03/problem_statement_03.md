@@ -15,7 +15,7 @@ Use **`rand`** and **constraint blocks** appropriately to apply these constraint
 
 ---
 
-# Solution:
+## Solution:
 The solution is implemented as follows:
 
 ```SystemVerilog
@@ -32,7 +32,7 @@ package alu_seq_item_pkg;
 
   class alu_sequence_item extends uvm_sequence_item; 
 
-// === transaction ===
+    // transaction 
     rand bit [3:0] operand_a; 
     rand bit [3:0] operand_b; 
     rand bit [2:0] opcode; 
@@ -41,14 +41,14 @@ package alu_seq_item_pkg;
       super.new(name); 
     endfunction 
 
-// === Factory registration & field automation ===
+    // Factory registration & field automation 
     `uvm_object_utils_begin(alu_sequence_item) 
     `uvm_field_int(operand_a, UVM_ALL_ON) 
     `uvm_field_int(operand_b, UVM_ALL_ON) 
     `uvm_field_int(opcode, UVM_ALL_ON) 
     `uvm_object_utils_end 
 
-// === Constraints ===
+    // Constraints 
     constraint operand_range{ 
       operand_a inside {[0:15]}; 
       operand_b inside {[0:15]}; 
@@ -60,7 +60,7 @@ package alu_seq_item_pkg;
   endclass 
 endpackage 
 
-// === Testbench for alu_sequence_item ===
+// Testbench for alu_sequence_item 
 
 `include "uvm_macros.svh" 
 import uvm_pkg::*; 
@@ -74,7 +74,7 @@ module tb_alu_sequence_item;
    
     repeat(5) begin 
 
-// === Randomize the sequence item and check if successful ===
+      // Randomize the sequence item and check if successful 
       if(!pkt.randomize()) begin 
         `uvm_error("Alu_Sequence_Item",  "Randomization Failed!"); 
       end else begin 
@@ -83,3 +83,4 @@ module tb_alu_sequence_item;
     end 
   end 
 endmodule
+```
