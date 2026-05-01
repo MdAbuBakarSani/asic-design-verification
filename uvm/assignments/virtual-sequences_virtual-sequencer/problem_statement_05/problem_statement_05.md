@@ -11,7 +11,7 @@ Pass an **integer value** such as **`transfer_count`** via **`uvm_config_db`** f
 
 -----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
@@ -23,7 +23,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Transaction Class ===
+// Transaction Class 
 class my_transaction extends uvm_sequence_item;
   `uvm_object_utils(my_transaction)
   
@@ -32,7 +32,7 @@ class my_transaction extends uvm_sequence_item;
   endfunction
 endclass
 
-// === Read Sequencer ===
+// Read Sequencer 
 class read_sequencer extends uvm_sequencer#(my_transaction);
   `uvm_component_utils(read_sequencer)
   
@@ -41,7 +41,7 @@ class read_sequencer extends uvm_sequencer#(my_transaction);
   endfunction
 endclass
 
-// === Write Sequencer ===
+// Write Sequencer 
 class write_sequencer extends uvm_sequencer#(my_transaction);
   `uvm_component_utils(write_sequencer)
   
@@ -50,7 +50,7 @@ class write_sequencer extends uvm_sequencer#(my_transaction);
   endfunction
 endclass
 
-// === Read Sequence ===
+// Read Sequence 
 class read_sequence extends uvm_sequence#(my_transaction);
   `uvm_object_utils(read_sequence)
   
@@ -58,26 +58,26 @@ class read_sequence extends uvm_sequence#(my_transaction);
     super.new(name);
   endfunction
 
-// === Sequence body ===
+  // Sequence body 
   task body();
     `uvm_info("Read Sequence", "Running", UVM_LOW)
   endtask
 endclass
 
-// === Write Sequence ===
+// Write Sequence 
 class write_sequence extends uvm_sequence#(my_transaction);
   `uvm_object_utils(write_sequence)
   function new (string name = "write_sequence");
     super.new(name);
   endfunction
 
-// === Sequence body ===
+  // Sequence body 
   task body();
     `uvm_info("Write Sequence", "Running", UVM_LOW)
   endtask
 endclass
 
-// === Virtual Sequencer ===
+// Virtual Sequencer 
 class virtual_sequencer extends uvm_sequencer#(uvm_sequence_item);
   `uvm_component_utils(virtual_sequencer)
   
@@ -89,7 +89,7 @@ class virtual_sequencer extends uvm_sequencer#(uvm_sequence_item);
   endfunction
 endclass
 
-// === Virtual Sequence ===
+// Virtual Sequence
 class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
   `uvm_declare_p_sequencer(virtual_sequencer)
   `uvm_object_utils(virtual_sequence)
@@ -100,12 +100,12 @@ class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
     super.new(name);
   endfunction
 
-// === pre_body retrieves transfer_count from config_db ===
+  // pre_body retrieves transfer_count from config_db 
   virtual task pre_body();
     uvm_config_db#(int)::get(null, get_full_name(), "transfer_count", transfer_count);
   endtask
 
-// === Body starts child sequences transfer_count times ===
+  // Body starts child sequences transfer_count times 
   task body();
     for (int i = 0; i <transfer_count, i++) begin
       
@@ -118,7 +118,7 @@ class virtual_sequence extends uvm_sequence#(uvm_sequence_item);
   endtask
 endclass
 
-// === Environment Class ===
+// Environment Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   
@@ -130,7 +130,7 @@ class my_environment extends uvm_env;
     super.new(n,p); 
   endfunction
 
-// === Build phase creates all sequencers ===
+  // Build phase creates all sequencers 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
@@ -139,7 +139,7 @@ class my_environment extends uvm_env;
     vseqr = virtual_sequencer::type_id::create("vseqr", this);
   endfunction
 
-// === Connect phase assigns real sequencer handles to virtual sequencer ===
+  // Connect phase assigns real sequencer handles to virtual sequencer 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
     vseqr.read_seqr  = rseqr;
@@ -147,7 +147,7 @@ class my_environment extends uvm_env;
   endfunction
 endclass  
 
-// === Test Class ===
+// Test Class 
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
   
@@ -158,13 +158,13 @@ class my_test extends uvm_test;
     super.new(n, p);
   endfunction
 
-// === Build phase creates environment ===
+  // Build phase creates environment 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     env = my_environment::type_id::create("env", this);
   endfunction
 
-// === Run phase creates virtual sequence, sets transfer_count and starts it ===
+  // Run phase creates virtual sequence, sets transfer_count and starts it 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
     virtual_sequence vs = virtual_sequence::type_id::create("vs"); 
@@ -174,7 +174,8 @@ class my_test extends uvm_test;
   endtask
 endclass
 
-// === Top Module ===
+// Top Module 
 module top;
   initial run_test("my_test");
 endmodule
+```
