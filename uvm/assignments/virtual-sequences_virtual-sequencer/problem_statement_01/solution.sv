@@ -4,7 +4,7 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Virtual Sequence Class ===
+// Virtual Sequence Class 
 class virtual_seq extends uvm_sequence;
   `uvm_object_utils(virtual_seq)
   `uvm_declare_p_sequencer(virtual_sequencer)
@@ -16,7 +16,7 @@ class virtual_seq extends uvm_sequence;
     super.new(name);
   endfunction
 
-// === Body task creates both sequences and starts them in parallel ===
+  // Body task creates both sequences and starts them in parallel
   task body();
     rseq = read_seq::type_id::create("rseq");
     wseq = write_seq::type_id::create("wseq");
