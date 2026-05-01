@@ -15,7 +15,7 @@ class bus_env extends uvm_env;
     super.new(name, parent); 
   endfunction 
 
-// === Build phase ===
+  // Build phase 
   function void build_phase (uvm_phase phase); 
     super.build_phase (phase); 
     act_agt = active_agent::type_id::create("act_agt", this); 
@@ -23,14 +23,14 @@ class bus_env extends uvm_env;
     cov = bus_coverage_collector::type_id::create("cov", this); 
   endfunction 
 
-// === Connect phase ===
+  // Connect phase 
   function void connect_phase(uvm_phase phase); 
     super.connect_phase(phase); 
 
-// === Active agent connection ===
+    // Active agent connection 
     act_agt.drv.seq_item_port.connect(act_agt.seqr.seq_item_export); 
 
-// === Passive agent connection ===
+    // Passive agent connection
     psv_agt.mon.mon_ap.connect(cov.analysis_export); 
   endfunction 
 endclass
