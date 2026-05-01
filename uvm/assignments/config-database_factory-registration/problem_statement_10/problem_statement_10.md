@@ -11,7 +11,7 @@ Use the **UVM factory** to register and override a **scoreboard implementation**
 
 ----
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
