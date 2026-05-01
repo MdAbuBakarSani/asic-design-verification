@@ -26,7 +26,7 @@ The solution is implemented as follows:
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Agent Class ===
+// Agent Class 
 class my_agent extends uvm_agent;
   `uvm_component_utils(my_agent)
 
@@ -39,27 +39,27 @@ class my_agent extends uvm_agent;
     super.new(name, parent);
   endfunction
 
-// === Build phase: creates components based on is_active value ===
+  // Build phase: creates components based on is_active value 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-// === Get is_active value from config_db ===
-// === If not found, default to UVM_ACTIVE ===
+    // Get is_active value from config_db 
+    // If not found, default to UVM_ACTIVE 
     if (!uvm_config_db#(uvm_active_passive_enum)::get(this, "", "is_active", is_active))
       is_active = UVM_ACTIVE;   // default
 
-// === If agent is active, create driver and sequencer ===
+    // If agent is active, create driver and sequencer 
     if (is_active == UVM_ACTIVE) begin
       drv = my_driver::type_id::create("drv", this);
       seqr = my_sequencer::type_id::create("seqr", this);
     end
 
-// === Monitor is created in both active and passive modes ===
+    // Monitor is created in both active and passive modes 
     mon = uvm_monitor::type_id::create("mon", this);
   endfunction
 endclass
 
-// === Environment Class ===
+// Environment Class 
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   my_agent agt;
@@ -68,7 +68,7 @@ class my_environment extends uvm_env;
     super.new(name, parent);
   endfunction
 
-// === Build phase: passes is_active flag to agent and creates agent ===
+  // Build phase: passes is_active flag to agent and creates agent 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
@@ -76,3 +76,6 @@ class my_environment extends uvm_env;
     agt = my_agent::type_id::create("agt", this);
   endfunction
 endclass
+
+
+```
