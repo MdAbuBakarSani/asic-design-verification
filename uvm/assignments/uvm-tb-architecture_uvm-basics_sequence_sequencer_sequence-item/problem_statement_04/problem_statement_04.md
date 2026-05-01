@@ -11,7 +11,7 @@ The sequence should:
 
 ---
 
-# Solution:
+## Solution:
 
 The solution is implemented as follows:
 
