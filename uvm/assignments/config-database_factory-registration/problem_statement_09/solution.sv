@@ -4,7 +4,7 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// === Transaction Class ===
+// Transaction Class
 class my_transaction extends uvm_sequence_item;
   `uvm_object_utils(my_transaction)
   
@@ -13,7 +13,7 @@ class my_transaction extends uvm_sequence_item;
   endfunction
 endclass
 
-// === Configuration Object Class ===
+// Configuration Object Class 
 class transaction_config extends uvm_object;
   `uvm_object_utils(transaction_config)
   
@@ -25,7 +25,7 @@ class transaction_config extends uvm_object;
   endfunction
 endclass
 
-// === Driver Class ===
+// Driver Class 
 class my_driver extends uvm_driver#(my_transaction);
   `uvm_component_utils(my_driver)
   
@@ -35,33 +35,33 @@ class my_driver extends uvm_driver#(my_transaction);
     super.new(name, parent); 
   endfunction
 
-// === Build phase retrieves the configuration object from config_db ===
+  // Build phase retrieves the configuration object from config_db
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     uvm_config_db#(transaction_config)::get(this, "", "cfg", cfg);
   endfunction
 endclass
 
-// === Environment Class ===
+// Environment Class
 class my_environment extends uvm_env;
   `uvm_component_utils(my_environment)
   
   my_driver drv;
 
-// === Build phase creates the driver ===
+  // Build phase creates the driver 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     drv = my_driver::type_id::create("drv", this);
   endfunction
 endclass
 
-// === Test Class ===
+// Test Class 
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
   
   my_environment env;
 
-// === Build phase creates config object, sets fields, and passes it through config_db ===
+  // Build phase creates config object, sets fields, and passes it through config_db 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
@@ -76,7 +76,7 @@ class my_test extends uvm_test;
   endfunction
 endclass
 
-// === Top Module ===
+// Top Module 
 module top;
   initial run_test("my_test");
 endmodule
