@@ -4,14 +4,14 @@
 `include "uvm_macros.svh" 
 import uvm_pkg::*;
 
-// === Monitor Class ===
+// Monitor Class 
 class bus_monitor extends uvm_monitor; 
   `uvm_component_utils(bus_monitor) 
 
   virtual bus_if vif;    
   uvm_analysis_port#(bus_transaction)mon_ap; 
 
-// === Queue used to store all observed transactions until extract_phase === 
+  // Queue used to store all observed transactions until extract_phase  
   bus_transaction collected_transaction [$]; 
   
   function new (string name, uvm_component parent); 
@@ -19,17 +19,17 @@ class bus_monitor extends uvm_monitor;
     mon_ap = new("mon_ap", this); 
   endfunction 
 
-// === Build phase to get the virtual interface from config_db ===
+  // Build phase to get the virtual interface from config_db 
   function void build_phase (uvm_phase phase); 
     super.build_phase(phase); 
 
-// === Gets the virtual interface from the UVM configuration database ===
+    // Gets the virtual interface from the UVM configuration database 
     if(!uvm_config_db#(virtual bus_if)::get(this, "", "vif", vif))  
       `uvm_fatal("No Virtual Interface", "Monitor") 
       endfunction 
 
-// === Run phase continuously observes bus activity ===
-  task run_phase(uvm_phase phase); 
+      // Run phase continuously observes bus activity 
+      task run_phase(uvm_phase phase);  
     bus_transaction tr; 
 
     forever begin 
@@ -44,7 +44,7 @@ class bus_monitor extends uvm_monitor;
     end 
   endtask 
 
-// === Extract Phase ===
+    // Extract Phase 
     function void extract_phase (uvm_phase phase); 
       super.extract_phase(phase); 
 
